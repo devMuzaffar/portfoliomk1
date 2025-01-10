@@ -24,7 +24,7 @@ const DesktopNav = () => {
       </div>
 
       {/* Links */}
-      <ul className="border-2 text-lg flex gap-5 w-1/2 justify-evenly h-full items-center rounded-full bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 dark:bg-opacity-40">
+      <ul className="border-2 text-lg flex gap-5 w-1/2 justify-evenly h-full items-center rounded-full bg-white glass-effect">
         {["Home", "Projects", "Blogs", "Contact"].map((text, index) => (
           <li key={index} className="transition-all hover:font-semibold">
             <a href="">{text}</a>

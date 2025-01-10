@@ -21,6 +21,10 @@
   @apply md:px-16;
 }
 
+.glass-effect{
+  @apply backdrop-filter backdrop-blur-lg bg-opacity-30 dark:bg-opacity-40;
+}
+
 
 /* Universal Padding for both Mobbile & Desktop */
 .section-padding {

@@ -1,4 +1,4 @@
-import { Skills, Hero, Navbar } from "./components";
+import { Skills, Hero, Navbar, Footer, Recent } from "./components";
 
 export default function Home() {
   return (
@@ -8,6 +8,11 @@ export default function Home() {
 
       <Hero />
       <Skills />
+
+      <Recent />
+
+
+      <Footer />
 
 
     </div>
