@@ -22,7 +22,7 @@ const profileEffect = {
   },
   transition: {
     repeat: Infinity,
-    repeatType: "reverse",
+    repeatType: "reverse" as const,
     duration: 5,
     ease: "easeInOut",
   },
