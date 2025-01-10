@@ -41,6 +41,11 @@ const DesktopNav = () => {
           className="text-4xl"
           duration={750}
           onToggle={() => toggleTheme()}
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerEnter={() => {}}
+          onPointerLeaveCapture={() => {}}
+          onPointerLeave={() => {}}
         />
       </div>
     </div>
