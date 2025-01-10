@@ -38,6 +38,11 @@ const MobileNav = () => {
           className="text-2xl"
           duration={750}
           onToggle={() => toggleTheme()}
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerEnter={() => {}}
+          onPointerLeaveCapture={() => {}}
+          onPointerLeave={() => {}}
         />
 
         <HiMenuAlt3 className="cursor-pointer" size={24} onClick={() => toggleMenu()} />
