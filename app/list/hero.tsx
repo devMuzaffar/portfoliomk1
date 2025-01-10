@@ -16,8 +16,8 @@ export const subTitle = [
 
 // Social Media Icons
 export const socialIcons: JSX.Element[] = [
-    <LuLinkedin />,
-    <LuGithub />,
-    <LuFacebook />,
-    <LuInstagram />
+    <LuLinkedin key={"linkedin"}/>,
+    <LuGithub key={"github"}/>,
+    <LuFacebook key={"facebook"}/>,
+    <LuInstagram key={"instagram"}/>
 ];
