@@ -1,41 +1,27 @@
-import Image from "next/image";
+import skillsList from "@/app/list/skillList";
 import Title from "../../ui/Title";
+import SkillCard from "./components/SkillCard";
 
 const Skills = () => {
   return (
-    <div id="skills" className="section-padding h-screen border-2 border-red-500">
+    <div id="skills" className="section-padding">
+      {/* Title */}
+      <Title text="Skills" />
 
-        {/* Title */}
-        <Title text="Skills"/>
+      {/* Skills Block */}
+      <div className="grid-custom">
 
-        {/* Skills Block */}
-        <div className="grid grid-cols-2">
+        {/* Skill Card */}
+        <SkillCard classNames={"area-a"} title={skillsList[0].title} icons={skillsList[0].icons}/>
+        <SkillCard classNames={"area-b"} title={skillsList[1].title} icons={skillsList[1].icons}/>
+        <SkillCard classNames={"area-c"} title={skillsList[2].title} icons={skillsList[2].icons}/>
 
-          {/* Grid 1 */}
-          <div className="border-2 flex flex-col justify-center items-center gap-2">
 
-            <div><Image width={64} height={64} src="/assets/skills/frontend.png" alt="" /></div>
-
-            <div className="text-lg">
-              <p>Frontend Development</p>
-            </div>
-
-            <div className="flex flex-wrap gap-2 items-center justify-center">
-
-              {Array.from({length: 20}).map((_, index) => (
-                <div key={index} className="text-sm bg-gray-500 rounded-full px-4 py-1 text-white">React Js</div>
-              ))}
-
-              
-
-            </div>
-
-          </div>
-
-        </div>
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
+
+// classNames={index === 0 ? "col-span-1 row-span-2": ""}

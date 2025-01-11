@@ -5,17 +5,17 @@ import { useTheme } from "next-themes";
 import { useState } from "react";
 
 const DesktopNav = () => {
-  const leftPadding = "left-8";
-  const rightPadding = "right-8";
+  const leftPadding = "left-16";
+  const rightPadding = "right-16";
   const { theme, setTheme } = useTheme();
-  const [isToggled, setIsToggled] = useState(true);
+  const [isToggled, setIsToggled] = useState(false);
 
   const toggleTheme = () => {
     return theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   return (
-    <div className="w-full mt-4 flex justify-center items-center h-16">
+    <div className="w-full mt-4 flex justify-center items-center h-14">
       {/* Icon / Name */}
       <div
         className={`font-bold cursor-pointer text-2xl absolute transition-all hover:text-primary ${leftPadding}`}
@@ -24,7 +24,7 @@ const DesktopNav = () => {
       </div>
 
       {/* Links */}
-      <ul className="border-2 text-lg flex gap-5 w-1/2 justify-evenly h-full items-center rounded-full bg-white glass-effect">
+      <ul className="border-[1px] border-gray-300 text-lg flex gap-5 w-1/2 justify-evenly h-full items-center rounded-full bg-white glass-effect">
         {["Home", "Projects", "Blogs", "Contact"].map((text, index) => (
           <li key={index} className="transition-all hover:font-semibold">
             <a href="">{text}</a>

@@ -13,8 +13,8 @@ const RightBlock = () => {
           <div className="bg-secondary rounded-full overflow-hidden w-56 h-56 md:w-80 md:h-80">
             <div className="overflow-hidden rounded-full relative inset-0 h-full w-56 md:w-80">
               <Image
+                className="object-cover"
                 fill
-                objectFit="cover"
                 src="/assets/profile.png"
                 alt="Profile"
               />

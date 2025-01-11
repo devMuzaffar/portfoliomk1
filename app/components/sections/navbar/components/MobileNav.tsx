@@ -10,7 +10,7 @@ const MobileNav = () => {
   const leftPadding = "left-8";
   const rightPadding = "right-8";
   const { theme, setTheme } = useTheme();
-  const [isToggled, setIsToggled] = useState(true);
+  const [isToggled, setIsToggled] = useState(false);
   const {setIsMobileMenu} = useContext(NavbarContext);
 
   const toggleTheme = () => {

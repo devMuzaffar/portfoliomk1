@@ -9,6 +9,39 @@
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.24), 0 4px 8px rgba(0, 0, 0, 0.1);
+  @apply bg-primary/10;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  width: 12px;
+  @apply bg-primary/20;
+}
+
+.dark {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/40;
+  }
+}
+
 .animate {
   @apply transition-all duration-500;
 }
@@ -21,13 +54,42 @@
   @apply md:px-16;
 }
 
-.glass-effect{
+.glass-effect {
   @apply backdrop-filter backdrop-blur-lg bg-opacity-30 dark:bg-opacity-40;
 }
 
-
 /* Universal Padding for both Mobbile & Desktop */
 .section-padding {
-  @apply py-24 px-4 sm:px-8 md:px-16;
+  @apply pt-24 pb-4 px-4 sm:px-8 md:px-16;
 }
 
+.grid-custom {
+  @apply grid grid-cols-1 gap-4;
+  grid-template-areas:
+    "a"
+    "c"
+    "b";
+}
+
+
+
+@media (min-width: 768px) {
+  .grid-custom {
+    @apply grid grid-cols-2 grid-rows-2 gap-4;
+    grid-template-areas:
+      "a c c"
+      "a b b";
+  }
+}
+
+.area-a {
+  grid-area: a;
+}
+
+.area-b {
+  grid-area: b;
+}
+
+.area-c {
+  grid-area: c;
+}

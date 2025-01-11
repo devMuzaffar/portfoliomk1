@@ -17,8 +17,8 @@ const profileEffect = {
       "linear-gradient(135deg, rgba(37, 99, 235, 1), rgba(59, 130, 246, 1))",
       "linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(37, 99, 235, 1))",
     ],
-    y: 1,
-    x: -1,
+    y: 10,
+    x: -5,
   },
   transition: {
     repeat: Infinity,
