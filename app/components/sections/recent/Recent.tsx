@@ -5,7 +5,7 @@ import ViewMore from "./components/ViewMore";
 
 const Recent = () => {
   return (
-    <div className="section-padding">
+    <div id="recents" className="section-padding">
       <Title text={"Recent Projects"} />
 
       {/* Recent Projects */}
