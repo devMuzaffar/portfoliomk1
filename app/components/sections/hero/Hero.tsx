@@ -4,7 +4,10 @@ import RightBlock from "./components/RightBlock";
 
 const Hero = () => {
   return (
-    <div className="desktop-px mobile-px h-screen flex flex-col-reverse relative justify-center items-center gap-16 pt-28 md:pt-6 sm:flex-row">
+    <div
+      id="hero"
+      className="section-padding h-screen flex flex-col-reverse relative justify-between items-center gap-16 !pt-28 sm:pt-6 sm:flex-row"
+    >
       {/* Left Texts */}
       <LeftBlock />
 

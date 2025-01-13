@@ -66,9 +66,11 @@
   @apply backdrop-filter backdrop-blur-lg bg-opacity-30 dark:bg-opacity-40;
 }
 
-/* Universal Padding for both Mobbile & Desktop */
+/*  */
+/* Universal Padding for both Mobile & Desktop */
+/*  */
 .section-padding {
-  @apply pt-24 pb-4 px-4 sm:px-8 md:px-16;
+  @apply py-16 px-4 sm:px-16 md:px-32;
 }
 
 /*  */

@@ -7,8 +7,8 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { NavbarContext } from "@/app/contexts/navbarContext";
 
 const MobileNav = () => {
-  const leftPadding = "left-8";
-  const rightPadding = "right-8";
+  const leftPadding = "left-4";
+  const rightPadding = "right-4";
   const { theme, setTheme } = useTheme();
   const [isToggled, setIsToggled] = useState(false);
   const {setIsMobileMenu} = useContext(NavbarContext);

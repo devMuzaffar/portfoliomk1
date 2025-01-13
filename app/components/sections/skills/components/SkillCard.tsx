@@ -14,7 +14,7 @@ interface iconPropType {
 const SkillCard = ({ title, icons, classNames }: skillProps) => {
   return (
     <div
-      className={`animate glass-effect rounded-xl flex flex-col p-2 gap-2 border-[1px] border-gray-400 dark:border-gray-600 hover:shadow-lg hover:border-primary hover:dark:border-primary hover:shadow-primary/20 hover:dark:shadow-primary/30 ${classNames}`}
+      className={`animate glass-effect rounded-xl flex flex-col p-2 gap-2 border-[1px] border-gray-400 dark:border-gray-600 hover:shadow-lg hover:border-primary hover:dark:border-primary hover:shadow-primary/20 hover:dark:shadow-primary/30 hover:-translate-y-1 ${classNames}`}
     >
       {/* Title */}
       <h2 className="font-medium text-xl text-center py-2">{title}</h2>
@@ -26,8 +26,10 @@ const SkillCard = ({ title, icons, classNames }: skillProps) => {
             key={index}
             className="h-full border-[1px] border-gray-300 bg-white rounded-xl flex flex-col gap-2 items-center justify-center p-2 dark:border-gray-600 dark:bg-gray-950"
           >
-            <div className="w-8 flex items-center justify-center">{item.icon}</div>
-            <h2 className="text-sm select-none">{item.name}</h2>
+            <div className="w-8 flex items-center justify-center">
+              {item.icon}
+            </div>
+            <h2 className="text-xs sm:text-sm select-none">{item.name}</h2>
           </div>
         ))}
       </div>

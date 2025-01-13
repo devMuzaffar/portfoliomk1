@@ -17,7 +17,7 @@ interface experienceProps {
 
 const Experience = ({ data }: dataProp) => {
   const renderLocationCompany =
-    data?.location?.length === undefined
+    data?.location?.length === undefined || data?.location?.length < 1
       ? data?.company
       : `${data?.location} - ${data?.company}`;
 
@@ -36,8 +36,7 @@ const Experience = ({ data }: dataProp) => {
           {/* Location - Company - Location Type */}
           <h3 className="text-sm font-medium">{renderLocationCompany}</h3>
 
-          {/* Time */}
-
+          {/* Text */}
           <div className="flex items-center justify-between">
             <h4 className="text-xs italic">{data?.text}</h4>
             <p className="text-xs px-2 py-0.5 w-fit bg-blue-100 text-primary rounded-full">
