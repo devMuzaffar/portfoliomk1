@@ -32,23 +32,29 @@ const LeftBlock = () => {
 
         {/* Buttons */}
         <div className="flex flex-col gap-4 py-2 sm:flex-row md:gap-2">
-          <HeroButton className="bg-primary hover:bg-primary/60 w-full md:w-auto">
-            Contact Me <LuSend size={18} />
-          </HeroButton>
-          <HeroButton className="bg-secondary hover:bg-secondary/60 w-full md:w-auto">
-            Download CV <LuDownload size={18} />
-          </HeroButton>
+          <a href="mailto:muzaffarhassan64@gmail.com">
+            <HeroButton className="bg-primary hover:bg-primary/60 w-full md:w-auto">
+              Contact Me <LuSend size={18} />
+            </HeroButton>
+          </a>
+          <a href="/assets/resume.pdf" target="_blank">
+            <HeroButton className="bg-secondary hover:bg-secondary/60 w-full md:w-auto">
+              Download CV <LuDownload size={18} />
+            </HeroButton>
+          </a>
         </div>
 
         {/* Social Media Buttons */}
-        <div className="py-2 flex gap-4 text-xl text-gray-800 dark:text-white">
-          {socialIcons.map((item, index) => (
-            <span
+        <div className="px-2 flex gap-4 text-xl text-gray-800 dark:text-white">
+          {socialIcons.map(({ icon, link }, index) => (
+            <a
               key={index}
               className="animate cursor-pointer hover:-translate-y-1"
+              href={link}
+              target="_blank"
             >
-              {item}
-            </span>
+              {icon}
+            </a>
           ))}
         </div>
       </div>

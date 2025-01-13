@@ -20,7 +20,9 @@ const DesktopNav = () => {
       <div
         className={`font-bold cursor-pointer text-2xl absolute transition-all hover:text-primary ${leftPadding}`}
       >
-        <p>DevMuzaffar</p>
+        <a href="#hero">
+          <p>DevMuzaffar</p>
+        </a>
       </div>
 
       {/* Links */}

@@ -10,6 +10,7 @@ const FormBlock = () => {
               className="font-normal text-gray-800 outline-none bg-transparent dark:text-gray-200"
               type="email"
               id="email"
+              required
             />
           </div>
 
@@ -19,6 +20,7 @@ const FormBlock = () => {
             <textarea
               className="font-normal text-gray-800 outline-none bg-transparent dark:text-gray-200"
               id="message"
+              required
             />
           </div>
 
