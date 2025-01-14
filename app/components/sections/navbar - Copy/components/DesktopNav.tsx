@@ -3,19 +3,23 @@ import "@theme-toggles/react/css/Classic.css";
 import { Classic } from "@theme-toggles/react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import useScrollScan from "@/app/hooks/useScrollScan";
+import menuList from "@/app/list/menuList";
 
 const DesktopNav = () => {
-  const leftPadding = "left-16";
-  const rightPadding = "right-16";
+  const leftPadding = "left-32";
+  const rightPadding = "right-32";
   const { theme, setTheme } = useTheme();
   const [isToggled, setIsToggled] = useState(false);
+  const isScroll = useScrollScan();
+  const glassScroll = isScroll ? "glass-effect bg-white" : "";
 
   const toggleTheme = () => {
     return theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   return (
-    <div className="w-full mt-4 flex justify-center items-center h-14">
+    <div className={`animate w-full py-2 flex justify-center items-center h-20 ${glassScroll}`}>
       {/* Icon / Name */}
       <div
         className={`font-bold cursor-pointer text-2xl absolute transition-all hover:text-primary ${leftPadding}`}
@@ -26,10 +30,11 @@ const DesktopNav = () => {
       </div>
 
       {/* Links */}
-      <ul className="border-[1px] border-gray-300 text-lg flex gap-5 w-1/2 justify-evenly h-full items-center rounded-full bg-white glass-effect">
-        {["Home", "Projects", "Blogs", "Contact"].map((text, index) => (
-          <li key={index} className="transition-all hover:font-semibold">
-            <a href="">{text}</a>
+      <ul className="text-lg flex gap-5 w-1/2 justify-evenly h-full items-center">
+        {menuList.map(({name, link}, index) => (
+          <li key={index} className="transition-all relative group">
+            <a href={link}>{name}</a>
+            <div className={`animate absolute rounded-full w-full h-1 bg-none group-hover:bg-primary`} />
           </li>
         ))}
       </ul>

@@ -7,7 +7,7 @@ import EducationMobile from "./components/EducationMobile";
 
 const Qualification = () => {
   return (
-    <div id="education" className="section-padding">
+    <div id="qualification" className="section-padding">
       <Title text="Education & Experience" />
 
       {/* Timeline - Desktop */}

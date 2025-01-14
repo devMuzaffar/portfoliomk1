@@ -3,9 +3,9 @@ import { NavbarContext } from "@/app/contexts/navbarContext";
 import { useContext } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
+import menuList from "@/app/list/menuList";
 
 const MobileMenu = () => {
-  const menuList = ["Home", "Projects", "Blogs", "Contact"];
   const { isMobileMenu, setIsMobileMenu } = useContext(NavbarContext);
 
   const closeMenu = () => setIsMobileMenu(false);
@@ -26,7 +26,7 @@ const MobileMenu = () => {
             animate={{ x: 0 }}
             exit={{ x: 400 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="bg-white w-1/2 flex flex-col p-8 h-full absolute dark:bg-primary-dark"
+            className="bg-white w-1/2 flex flex-col p-8 h-full absolute dark:bg-primary-dark sm:w-1/3"
             onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
             {/* Close */}
@@ -46,10 +46,10 @@ const MobileMenu = () => {
             </div>
 
             {/* Links */}
-            <ul className="text-lg flex flex-col gap-16 py-10 items-center h-full">
-              {menuList.map((text, index) => (
-                <li key={index} className="transition-all hover:font-medium">
-                  <a href="">{text}</a>
+            <ul className="text-lg flex flex-col gap-12 py-8 items-center h-full">
+              {menuList.map(({name, link}, index) => (
+                <li key={index} className="transition-all text-left w-full hover:font-medium" onClick={() => closeMenu()}>
+                  <a href={link}>{name}</a>
                 </li>
               ))}
             </ul>

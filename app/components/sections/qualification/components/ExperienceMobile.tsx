@@ -25,7 +25,7 @@ const ExperienceMobile = ({ data }: dataProp) => {
       {/* Left Card */}
       <div className="relative w-full my-auto">
         {/* Card */}
-        <div className="glass-effect w-full border-2 rounded-md flex flex-col gap-1 py-2 px-6 shadow-sm border-gray-300 bg-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div className="glass-effect w-full border-[1px] rounded-md flex flex-col gap-1 py-2 px-6 shadow-sm border-gray-300 bg-gray-200 dark:bg-gray-900 dark:border-gray-700">
           {/* Job Title */}
           <div className="flex items-center justify-between flex-wrap">
             <div className="flex items-center gap-2">

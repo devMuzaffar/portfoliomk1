@@ -17,7 +17,7 @@ const Education = () => {
         <div className="absolute top-1/2 -left-3 text-gray-600 dark:text-gray-300">
           <FaCaretLeft size={18} />
         </div>
-        <div className="glass-effect border-2 rounded-md shadow-sm border-gray-300 bg-gray-200 flex flex-col gap-1 py-2 px-6 dark:bg-gray-900 dark:border-gray-700">
+        <div className="glass-effect border-[1px] rounded-md shadow-sm border-gray-300 bg-gray-200 flex flex-col gap-1 py-2 px-6 dark:bg-gray-900 dark:border-gray-700">
           {/* Job Title */}
           <h2 className="text-lg font-semibold">
             Bachelor&apos;s in Information Technology (BSIT)
