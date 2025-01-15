@@ -2,7 +2,9 @@ import { Firebase, Next, Reactjs, Sass, Tailwind } from "@react-symbols/icons";
 import { SiMui } from "react-icons/si";
 import FramerMotion from "../components/ui/FramerMotion";
 
-const recentProjects = [
+
+// Recent Projects
+export const recentProjects = [
   // 1st
   {
     img: "/assets/recents/pts.png",
@@ -78,4 +80,28 @@ const recentProjects = [
   },
 ];
 
-export default recentProjects;
+
+
+// Full Stack Projects
+export const fullStackProjects = [
+
+  // Start
+  {
+    img: "/assets/recents/pts.png",
+    title: "PTS Education",
+    githubLink: "https://github.com/devMuzaffar/pts-web",
+    siteLink: "https://ptseducation.vercel.app/",
+    icons: [
+      <Next key={"github"} />,
+    ],
+  },
+
+];
+
+
+// TODO: add Full Stack, Frotnend and all List
+// TODO: Add View all button to expand Frotnend list only (Intitial Height to Height full)
+
+// TODO: add AOS or Framer Motion to Each section
+// TODO: Add Backgorund video
+// TODO: Add loading option

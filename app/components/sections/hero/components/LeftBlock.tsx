@@ -57,16 +57,16 @@ const LeftBlock = () => {
             </a>
           ))}
         </div>
-      </div>
 
-      {/* Scroll Down button */}
+        {/* Scroll Down button */}
       <Link href="#services">
-        <div className="w-fit absolute bottom-5 right-10 animate flex gap-2 items-center hover:translate-y-1 md:bottom-20 md:left-48">
+        <div className="w-fit absolute right-0 -bottom-10 animate flex gap-2 items-center hover:translate-y-1">
           <LuMouse className="text-primary" size={32} />
           <p className="text-sm font-medium">Scroll Down</p>
           <LuArrowDown className="text-primary" size={18} />
         </div>
       </Link>
+      </div>
     </div>
   );
 };

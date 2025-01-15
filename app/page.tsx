@@ -3,10 +3,10 @@ import {
   Hero,
   Navbar,
   Footer,
-  Recent,
   Qualification,
   Contact,
   Services,
+  Projects,
 } from "./components";
 
 export default function Home() {
@@ -17,11 +17,11 @@ export default function Home() {
       <Hero />
       <Services />
       <Skills />
-      <Recent />
+      <Projects />
       <Qualification />
       <Contact />
-
       <Footer />
+
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Menu from "./components/Menu";
 const Navbar = () => {
   return (
     <NavbarProvider>
-      <div className="fixed w-full z-50">
+      <div className="fixed w-full z-10">
         {/* Navbar */}
         <Nav />
 

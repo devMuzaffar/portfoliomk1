@@ -3,7 +3,7 @@ import servicesList from "@/app/list/servicesList";
 
 const Services = () => {
   return (
-    <div id="services" className="section-padding">
+    <div id="services" className="section-padding md:h-screen">
       <Title text={"Services"} />
 
       {/* Services tab */}
