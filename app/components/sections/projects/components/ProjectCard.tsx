@@ -19,9 +19,9 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   return (
-    <div className="animate border-[1px] border-transparent glass-effect h-full rounded-xl flex flex-col justify-evenly gap-2 p-2 hover:-translate-y-1 hover:border-primary dark:border-gray-700 hover:dark:border-primary hover:bg-primary/10 hover:dark:bg-gray-800">
+    <div className="animate border-[1px] border-gray-400 glass-effect max-h-min rounded-xl flex flex-col justify-evenly gap-2 p-2 hover:-translate-y-1 hover:border-primary dark:border-gray-700 hover:dark:border-primary hover:bg-primary/10 hover:dark:bg-gray-800">
       {/* Top Image */}
-      <div className="relative inset-0 w-full h-36 rounded-md overflow-hidden">
+      <div className="relative inset-0 w-full h-36 rounded-md border-[1px] border-gray-400 overflow-hidden">
         {data?.img ? (
           <Image
             className="animate object-cover"

@@ -9,11 +9,11 @@ const ViewMore = ({ onClick }: { onClick?: () => void }) => {
 
   return (
     <div
-      className="cursor-pointer sm:col-span-2 md:col-span-3 flex items-center justify-end py-1 px-4"
-      onClick={() => handleClick}
+      className="sm:col-span-2 md:col-span-3 flex items-center justify-end py-1 px-4"
+      onClick={handleClick}
     >
       <div className="w-fit">
-        <p className="animate text-secondary flex items-center gap-1 hover:translate-x-1">
+        <p className="animate cursor-pointer text-secondary flex items-center gap-1 hover:translate-x-1">
           View More <LuArrowRight size={18} />
         </p>
       </div>

@@ -1,5 +1,3 @@
-"use client";
-
 interface buttonProps {
   children?: React.ReactNode;
   onClick?: () => void;
@@ -7,7 +5,11 @@ interface buttonProps {
   isSelected?: boolean;
 }
 
-const FilterButton = ({ children, onClick, isSelected = false }: buttonProps) => {
+const FilterButton = ({
+  children,
+  onClick,
+  isSelected = false,
+}: buttonProps) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -21,7 +23,7 @@ const FilterButton = ({ children, onClick, isSelected = false }: buttonProps) =>
   return (
     <button
       className={`animate glass-effect border-[1px] font-medium text-sm rounded-xl px-4 py-2 ${buttonStyle}`}
-      onClick={() => handleClick}
+      onClick={handleClick}
     >
       {children}
     </button>
