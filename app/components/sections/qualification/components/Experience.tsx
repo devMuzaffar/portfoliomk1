@@ -22,7 +22,7 @@ const Experience = ({ data }: dataProp) => {
       : `${data?.location} - ${data?.company}`;
 
   return (
-    <div className="grid grid-cols-3 h-36 place-items-center group">
+    <div data-aos="fade-up" className="grid grid-cols-3 h-36 place-items-center group">
       {/* Left Card */}
       <div className="translate-x-32 relative place-self-end w-full my-auto">
         {/* Card */}

@@ -3,7 +3,7 @@ import MiddleLine from "./MiddleLine";
 
 const Education = () => {
   return (
-    <div className="grid grid-cols-3 h-36 place-items-center group">
+    <div data-aos="fade-up" className="grid grid-cols-3 h-36 place-items-center group">
       {/* Left Placeholder */}
       <div className="place-self-end w-full h-full translate-x-40 flex items-center justify-end text-sm">
         2018-2022

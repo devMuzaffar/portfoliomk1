@@ -20,7 +20,7 @@ const MobileNav = () => {
       <div
         className={`font-bold cursor-pointer text-lg transition-all hover:text-blue-500 md:text-2xl`}
       >
-        <a href="#hero">
+        <a href="#">
           <p>DevMuzaffar</p>
         </a>
       </div>

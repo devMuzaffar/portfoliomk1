@@ -15,7 +15,7 @@ interface experienceProps {
 
 const EducationMobile = ({ data }: dataProp) => {
   return (
-    <div className="flex h-full sm:h-32 group">
+    <div data-aos="fade-up" className="flex h-full sm:h-32 group">
       {/* Left Card */}
       <div className="relative w-full my-auto">
         {/* Card */}

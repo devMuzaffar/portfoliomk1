@@ -15,7 +15,7 @@ const FormBlock = () => {
       </div>
 
       {/* Message */}
-      <div className="animate border-2 flex flex-col gap-2 rounded-xl bg-primary/10 p-6 font-medium text-sm md:text-lg focus-within:border-2 focus-within:border-primary">
+      <div className="animate border-2 border-transparent flex flex-col gap-2 rounded-xl bg-primary/10 p-6 font-medium text-sm md:text-lg focus-within:border-2 focus-within:border-primary">
         <label htmlFor="message">Message</label>
         <textarea
           className="font-normal text-gray-800 outline-none bg-transparent dark:text-gray-200"

@@ -4,10 +4,11 @@ import { socialIcons, subTitle } from "@/app/list/hero";
 import { LuDownload, LuMouse, LuSend } from "react-icons/lu";
 import { LuArrowDown } from "react-icons/lu";
 import Link from "next/link";
+import FloatingButton from "../ui/FloatingButton";
 
 const LeftBlock = () => {
   return (
-    <div className="flex-1 flex flex-col justify-top items-center sm:justify-center">
+    <div data-aos="fade-right" className="flex-1 flex flex-col justify-top items-center sm:justify-center">
       <div className="flex flex-col gap-4 relative">
         {/* Greet Text */}
         <div className="text-lg sm:text-2xl text-gray-600 dark:text-gray-200">
@@ -59,13 +60,15 @@ const LeftBlock = () => {
         </div>
 
         {/* Scroll Down button */}
-      <Link href="#services">
-        <div className="w-fit absolute right-0 -bottom-10 animate flex gap-2 items-center hover:translate-y-1">
-          <LuMouse className="text-primary" size={32} />
-          <p className="text-sm font-medium">Scroll Down</p>
-          <LuArrowDown className="text-primary" size={18} />
-        </div>
-      </Link>
+        <Link href="#services">
+          <FloatingButton>
+            <div className="w-fit absolute right-0 -bottom-10 animate flex gap-2 items-center">
+              <LuMouse className="text-primary" size={32} />
+              <p className="text-sm font-medium">Scroll Down</p>
+              <LuArrowDown className="text-primary" size={18} />
+            </div>
+          </FloatingButton>
+        </Link>
       </div>
     </div>
   );

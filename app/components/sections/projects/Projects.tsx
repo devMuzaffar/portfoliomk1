@@ -3,43 +3,53 @@ import {
   recentProjects,
   fullStackProjects,
   frontendProjects,
-  allProjects,
 } from "@/app/list/projectsList";
 import Title from "../../ui/Title";
 import ProjectCard from "./components/ProjectCard";
 import ViewMore from "./components/ViewMore";
 import FilterButton from "./components/FilterButton";
 import { useState } from "react";
+import MotionCard from "./ui/MotionCard";
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
-  const buttonList = ["Recent", "Full Stack", "Frontend", "All"];
+  const buttonList = ["Featured", "Full Stack", "Frontend"];
   const projectsList = [
     [...recentProjects],
     [...fullStackProjects],
     [...frontendProjects],
-    [...allProjects],
   ];
+  const handleViewAll = () => {
+    setIsExpanded(!isExpanded);
+    if (isExpanded) {
+      document.getElementById("projects")?.scrollIntoView();
+    }
+  };
+
+  // HOC ViewMore button
   const ViewMoreButton = () =>
     projectsList[selectedIndex].length > 6 && (
       <ViewMore onClick={() => handleViewAll()} />
     );
-  const expansionCondition = isExpanded ? "h-auto" : "h-[calc(100vh)] sm:h-[calc(100vh-05vh)] md:h-[calc(100vh-18vh)]";
 
-  const handleViewAll = () => {
-    if (isExpanded) {
-      // document.getElementById("projects")?.scrollIntoView();
-    }
-    setIsExpanded(!isExpanded);
-  };
+  // Limit imposed List
+  const projectsListLimited = projectsList[selectedIndex].slice(
+    0,
+    isExpanded ? projectsList[selectedIndex].length : 6
+  );
 
   return (
-    <div id="projects" className="section-padding" suppressHydrationWarning >
+    <div
+      data-aos="fade-up"
+      id="projects"
+      className="section-padding"
+      suppressHydrationWarning
+    >
       <Title text={"Portfolio"} />
 
       {/* Filter Buttons */}
-      <div className="w-full grid grid-cols-2 gap-4 pb-6 sm:grid-cols-4 md:flex md:justify-center">
+      <div className="w-full grid grid-cols-3 gap-4 pb-6 sm:grid-cols-3 md:flex md:justify-center">
         {buttonList.map((text, index) => (
           <FilterButton
             key={index}
@@ -52,15 +62,20 @@ const Projects = () => {
       </div>
 
       {/* Projects List */}
-      <div
-        className={`animate grid gap-4 overflow-y-hidden sm:grid-cols-2 md:grid-cols-3 ${expansionCondition}`}
-      >
-        {/* Single Grid */}
-        {projectsList[selectedIndex].map((item, index) => (
-          <ProjectCard key={index} data={item} />
-        ))}
+      <div className="flex flex-col gap-2">
+        {/* Single Grid with Motion */}
+        <MotionCard
+          list={projectsList[selectedIndex]}
+          className="animate grid gap-4 overflow-y-hidden sm:grid-cols-2 md:grid-cols-3"
+        >
+          {projectsListLimited.map((item, index) => (
+            <ProjectCard key={index} data={item} />
+          ))}
+        </MotionCard>
+
+        {/* View More */}
+        <ViewMoreButton />
       </div>
-      <ViewMoreButton />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Skills = () => {
       <Title text="Skills" />
 
       {/* Skills Block */}
-      <div className="grid-custom">
+      <div data-aos="fade-right" className="grid-custom">
         {/* Skill Card */}
         <SkillCard
           classNames={"area-a"}

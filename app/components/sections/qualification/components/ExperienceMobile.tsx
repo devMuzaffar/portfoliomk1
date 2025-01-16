@@ -21,7 +21,7 @@ const ExperienceMobile = ({ data }: dataProp) => {
       ? data?.company
       : `${data?.location} - ${data?.company}`;
   return (
-    <div className="flex h-full my-4 sm:my-0 sm:h-32 group">
+    <div data-aos="fade-up" className="flex h-full my-4 sm:my-0 sm:h-32 group">
       {/* Left Card */}
       <div className="relative w-full my-auto">
         {/* Card */}

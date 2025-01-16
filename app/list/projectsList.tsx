@@ -299,20 +299,3 @@ export const frontendProjects = [
     icons: basicTechIcons,
   },
 ];
-
-const projectSet = new Set<string>();
-export const allProjects = [
-  ...recentProjects,
-  ...fullStackProjects,
-  ...frontendProjects,
-].filter((project) => {
-  if (projectSet.has(project.title)) return false;
-  projectSet.add(project.title);
-  return true;
-});
-
-// TODO: Add View all button to expand Frotnend list only (Intitial Height to Height full)
-
-// TODO: add AOS or Framer Motion to Each section
-// TODO: Add Backgorund video
-// TODO: Add loading option

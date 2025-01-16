@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const RightBlock = () => {
   return (
-    <div className="flex-1 hidden md:block">
+    <div data-aos="fade-left" className="flex-1 hidden md:block">
       <div className="flex justify-center items-center">
         <motion.div
           className="bg-primary flex items-center justify-center w-64 h-64 md:w-[352px] md:h-[352px]"
