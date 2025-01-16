@@ -27,7 +27,7 @@ const ParticleEffect = () => {
       interactivity: {
         events: {
           onHover: {
-            enable: true,
+            enable: false,
             mode: "repulse",
           },
         },
