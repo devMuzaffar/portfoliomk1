@@ -24,7 +24,7 @@ export default function Home() {
       once: true,
     });
 
-    const timeoutId = setTimeout(() => setIsLoading(false), 250);
+    const timeoutId = setTimeout(() => setIsLoading(false), 800);
 
     return () => clearTimeout(timeoutId);
   }, []);
