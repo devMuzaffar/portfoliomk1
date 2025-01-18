@@ -16,7 +16,7 @@ const SkillCard = ({ title, icons, classNames, animateFrom }: skillProps) => {
   return (
     <div
       data-aos={animateFrom}
-      className={`animate glass-effect rounded-xl flex flex-col p-2 gap-2 border-[1px] border-gray-400 dark:border-gray-600 md:hover:shadow-lg md:hover:border-primary md:hover:dark:border-primary md:hover:shadow-primary/20 md:hover:dark:shadow-primary/30  md:hover:-translate-y-1 ${classNames}`}
+      className={`animate glass-effect rounded-xl flex flex-col p-2 gap-2 border-[1px] border-gray-400 dark:border-gray-600 hover:shadow-lg hover:border-primary hover:dark:border-primary hover:shadow-primary/20 hover:dark:shadow-primary/30  hover:-translate-y-1 ${classNames}`}
     >
       {/* Title */}
       <h2 className="font-medium text-xl text-center py-2">{title}</h2>
