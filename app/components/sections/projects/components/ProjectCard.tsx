@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
       {/* Bottom Block */}
       <div className="flex flex-col px-2 gap-4">
         {/* Title */}
-        <h2 className="text-xl font-medium">
+        <h2 className="text-xl font-medium tracking-wide">
           {data?.title || "Untitled Project"}
         </h2>
 

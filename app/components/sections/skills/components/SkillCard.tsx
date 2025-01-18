@@ -28,10 +28,12 @@ const SkillCard = ({ title, icons, classNames, animateFrom }: skillProps) => {
             key={index}
             className="h-full border-[1px] border-gray-300 bg-white rounded-xl flex flex-col gap-2 items-center justify-center p-2 dark:border-gray-600 dark:bg-gray-950"
           >
-            <div className="w-8 flex items-center justify-center">
+            <div className="w-auto flex items-center justify-center">
               {item.icon}
             </div>
-            <h2 className="text-xs sm:text-sm select-none">{item.name}</h2>
+            <h2 className="text-xs sm:text-base text-center select-none">
+              {item.name}
+            </h2>
           </div>
         ))}
       </div>

@@ -6,7 +6,7 @@ const CSS = ({size = 16}: {size?: number | `${number}` | undefined}) => {
       className="object-cover p-[2px]"
       width={size}
       height={size}
-      src={"/assets/recents/icons/css.png"}
+      src={"/assets/projects/icons/css.png"}
       alt=""
     />
   );

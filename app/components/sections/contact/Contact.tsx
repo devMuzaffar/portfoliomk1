@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div data-aos="fade-up" id="contact" className="section-padding">
+    <div id="contact" className="section-padding">
       <Title text={"Contact"} />
 
       {/* Contact Form */}
-      <div className="glass-effect grid rounded-xl h-full md:grid-cols-2">
+      <div data-aos="fade-up" className="glass-effect grid rounded-xl h-full md:grid-cols-2">
 
         {/* Left Contact */}
         <div className="hidden items-center justify-center md:flex">

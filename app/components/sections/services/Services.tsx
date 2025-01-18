@@ -3,7 +3,7 @@ import servicesList from "@/app/list/servicesList";
 
 const Services = () => {
   return (
-    <div data-aos="fade-up" id="services" className="section-padding md:h-screen">
+    <div id="services" className="section-padding md:h-screen">
       <Title text={"Services"} />
 
       {/* Services tab */}
@@ -12,6 +12,7 @@ const Services = () => {
         {/* List Tab */}
         {servicesList.map(({ icon, title, text }, index) => (
           <div
+            data-aos="fade-up"
             key={index}
             className="glass-effect animate rounded-xl flex flex-col items-center justify-top border-[1px] border-gray-400 p-4 dark:border-gray-600 hover:-translate-y-1 hover:shadow-md hover:shadow-primary"
           >

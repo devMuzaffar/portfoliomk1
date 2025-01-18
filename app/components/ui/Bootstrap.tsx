@@ -6,7 +6,7 @@ const Bootstrap = ({size = 16}: {size?: number | `${number}` | undefined}) => {
       className="object-cover p-[2px]"
       width={size}
       height={size}
-      src={"/assets/recents/icons/bootstrap.svg"}
+      src={"/assets/projects/icons/bootstrap.svg"}
       alt=""
     />
   );

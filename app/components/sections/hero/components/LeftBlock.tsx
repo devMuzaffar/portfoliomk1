@@ -8,7 +8,10 @@ import FloatingButton from "../ui/FloatingButton";
 
 const LeftBlock = () => {
   return (
-    <div data-aos="fade-right" className="flex-1 flex flex-col justify-top items-center sm:justify-center">
+    <div
+      data-aos="fade-right"
+      className="flex-1 flex flex-col justify-top items-center sm:justify-center"
+    >
       <div className="flex flex-col gap-4 relative">
         {/* Greet Text */}
         <div className="text-lg sm:text-2xl text-gray-600 dark:text-gray-200">
@@ -25,7 +28,7 @@ const LeftBlock = () => {
         {/* Subtitle */}
         <div>
           <TypeAnimation
-            className="text-lg text-gray-700 dark:text-gray-300 sm:text-xl"
+            className="text-lg leading-8 text-gray-700 dark:text-gray-300 sm:text-xl sm:leading-8"
             sequence={subTitle}
             repeat={Infinity}
           />
@@ -38,7 +41,10 @@ const LeftBlock = () => {
               Contact Me <LuSend size={18} />
             </HeroButton>
           </a>
-          <a href="/assets/resume.pdf" target="_blank">
+          <a
+            href="https://drive.google.com/file/d/1lx5VRd4mRdrICPqFiuoS4eHPh-UBlZmd/view?usp=sharing"
+            target="_blank"
+          >
             <HeroButton className="bg-secondary hover:bg-secondary/60 w-full md:w-auto">
               Download CV <LuDownload size={18} />
             </HeroButton>

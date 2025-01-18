@@ -41,7 +41,6 @@ const Projects = () => {
 
   return (
     <div
-      data-aos="fade-up"
       id="projects"
       className="section-padding"
       suppressHydrationWarning
@@ -62,7 +61,7 @@ const Projects = () => {
       </div>
 
       {/* Projects List */}
-      <div className="flex flex-col gap-2">
+      <div data-aos="fade-up" className="flex flex-col gap-2">
         {/* Single Grid with Motion */}
         <MotionCard
           list={projectsList[selectedIndex]}
