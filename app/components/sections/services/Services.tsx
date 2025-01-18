@@ -14,7 +14,7 @@ const Services = () => {
           <div
             data-aos="fade-up"
             key={index}
-            className="glass-effect animate rounded-xl flex flex-col items-center justify-top border-[1px] border-gray-400 p-4 dark:border-gray-600 hover:-translate-y-1 hover:shadow-md hover:shadow-primary"
+            className="glass-effect animate rounded-xl flex flex-col items-center justify-top border-[1px] border-gray-400 p-4 dark:border-gray-600 md:hover:-translate-y-1 md:hover:shadow-md md:hover:shadow-primary"
           >
             <div className="p-4">
             {icon}
