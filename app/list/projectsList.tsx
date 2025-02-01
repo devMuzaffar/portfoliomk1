@@ -1,12 +1,14 @@
 import {
   Firebase,
+  MongoDB,
   Next,
+  Node,
   Reactjs,
   Sass,
   Tailwind,
   Vite,
 } from "@react-symbols/icons";
-import { SiMui } from "react-icons/si";
+import { SiExpress, SiMui } from "react-icons/si";
 import FramerMotion from "../components/ui/FramerMotion";
 import HTML from "../components/ui/HTML";
 import Javascript from "../components/ui/Javascript";
@@ -31,7 +33,7 @@ const reactMuiIcons = [
 // Recent Projects
 //
 export const recentProjects = [
-  // 1st
+  //
   {
     img: "/assets/projects/pts.png",
     title: "PTS Education",
@@ -46,7 +48,23 @@ export const recentProjects = [
     ],
   },
 
-  // 2nd
+  //
+  {
+    img: "/assets/projects/merncrud.png",
+    title: "MongoMax",
+    githubLink: "https://github.com/devMuzaffar/merncrudapp",
+    siteLink: "https://merncrudapp-ui.onrender.com/",
+    icons: [
+      <Reactjs key={"react"} />,
+      <Node key={"node"} />,
+      <SiExpress key={"express"} />,
+      <MongoDB key={"mongo"} />,
+      <Tailwind key={"tailwind"} />,
+      <Bootstrap key={"bootstrap"} />,
+    ],
+  },
+
+  //
   {
     img: "/assets/projects/chaajao.png",
     title: "Chaajao Clone",
@@ -61,7 +79,7 @@ export const recentProjects = [
     ],
   },
 
-  // 3rd
+  //
   {
     img: "/assets/projects/chat.jpeg",
     title: "Chat App",
@@ -74,25 +92,7 @@ export const recentProjects = [
     ],
   },
 
-  // 4th
-  {
-    img: "/assets/projects/blog.png",
-    title: "Blog App",
-    githubLink: "https://github.com/devMuzaffar/React_Blog/",
-    siteLink: "https://myblogmk1.netlify.app/",
-    icons: [<Reactjs key={"react"} />, <Firebase key={"firebase"} />],
-  },
-
-  // 5th
-  {
-    img: "/assets/projects/weather.png",
-    title: "Weather App",
-    githubLink: "https://github.com/devMuzaffar/weather_app",
-    siteLink: "https://weatherappmk1.netlify.app/",
-    icons: reactTechIcons,
-  },
-
-  // 6th
+  //
   {
     img: "/assets/projects/gpt3.jpeg",
     title: "GPT-3 Web",
@@ -100,12 +100,25 @@ export const recentProjects = [
     siteLink: "https://gpt3mk.netlify.app/",
     icons: reactTechIcons,
   },
+
+  //
+  {
+    img: "/assets/projects/blog.png",
+    title: "Blog App",
+    githubLink: "https://github.com/devMuzaffar/React_Blog/",
+    siteLink: "https://myblogmk1.netlify.app/",
+    icons: [<Reactjs key={"react"} />, <Firebase key={"firebase"} />],
+  },
 ];
 
 //
 // Full Stack Projects
 //
-export const fullStackProjects = [recentProjects[3], recentProjects[2]];
+export const fullStackProjects = [
+  recentProjects[1],
+  recentProjects[3],
+  recentProjects[5],
+];
 
 //
 // Frontend Projects
