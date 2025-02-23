@@ -142,7 +142,7 @@ export const fullStackProjects = [
 
 export const frontendProjects = [
   // Start
-  recentProjects[4],
+  recentProjects[3],
   recentProjects[5],
   {
     img: "/assets/projects/dining.webp",
