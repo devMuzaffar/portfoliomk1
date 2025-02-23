@@ -1,7 +1,15 @@
 "use client";
 import { LuArrowRight } from "react-icons/lu";
-const ViewMore = ({ onClick }: { onClick?: () => void }) => {
+
+interface viewMoreProps {
+  onClick?: () => void;
+  isViewClicked: boolean;
+  setIsViewClicked: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ViewMore = ({ onClick, isViewClicked, setIsViewClicked }: viewMoreProps) => {
   const handleClick = () => {
+    setIsViewClicked(!isViewClicked);
     if (onClick) {
       onClick();
     }
@@ -14,7 +22,7 @@ const ViewMore = ({ onClick }: { onClick?: () => void }) => {
     >
       <div className="w-fit">
         <p className="animate cursor-pointer text-secondary flex items-center gap-1 hover:translate-x-1">
-          View More <LuArrowRight size={18} />
+          {isViewClicked ? "View Less" : "View More"} <LuArrowRight size={18} />
         </p>
       </div>
     </div>

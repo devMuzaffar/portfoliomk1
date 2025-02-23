@@ -50,6 +50,21 @@ export const recentProjects = [
 
   //
   {
+    img: "/assets/projects/coinbounce.png",
+    title: "Coin Bounce",
+    githubLink: "https://github.com/devMuzaffar/coin-bounce/",
+    siteLink: "https://coin-bounce-ui.onrender.com/",
+    icons: [
+      <Reactjs key={"react"} />,
+      <Node key={"node"} />,
+      <SiExpress key={"express"} />,
+      <MongoDB key={"mongo"} />,
+      <Tailwind key={"tailwind"} />,
+    ],
+  },
+
+  //
+  {
     img: "/assets/projects/merncrud.png",
     title: "MongoMax",
     githubLink: "https://github.com/devMuzaffar/merncrudapp",
@@ -100,6 +115,16 @@ export const recentProjects = [
     siteLink: "https://gpt3mk.netlify.app/",
     icons: reactTechIcons,
   },
+];
+
+//
+// Full Stack Projects
+//
+export const fullStackProjects = [
+  //
+  recentProjects[1],
+  recentProjects[2],
+  recentProjects[4],
 
   //
   {
@@ -109,15 +134,6 @@ export const recentProjects = [
     siteLink: "https://myblogmk1.netlify.app/",
     icons: [<Reactjs key={"react"} />, <Firebase key={"firebase"} />],
   },
-];
-
-//
-// Full Stack Projects
-//
-export const fullStackProjects = [
-  recentProjects[1],
-  recentProjects[3],
-  recentProjects[5],
 ];
 
 //

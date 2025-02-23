@@ -14,6 +14,7 @@ import MotionCard from "./ui/MotionCard";
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isViewClicked, setIsViewClicked] = useState(false);
   const buttonList = ["Featured", "Full Stack", "Frontend"];
   const projectsList = [
     [...recentProjects],
@@ -30,7 +31,7 @@ const Projects = () => {
   // HOC ViewMore button
   const ViewMoreButton = () =>
     projectsList[selectedIndex].length > 6 && (
-      <ViewMore onClick={() => handleViewAll()} />
+      <ViewMore onClick={() => handleViewAll()} isViewClicked={isViewClicked}  setIsViewClicked={setIsViewClicked} />
     );
 
   // Limit imposed List
