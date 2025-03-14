@@ -3,13 +3,14 @@ import {
   MongoDB,
   Next,
   Node,
+  Prisma,
   Reactjs,
+  ReduxActions,
   Sass,
   Tailwind,
   Vite,
 } from "@react-symbols/icons";
 import { SiExpress, SiMui } from "react-icons/si";
-import FramerMotion from "../components/ui/FramerMotion";
 import HTML from "../components/ui/HTML";
 import Javascript from "../components/ui/Javascript";
 import CSS from "../components/ui/CSS";
@@ -42,9 +43,10 @@ export const recentProjects = [
     icons: [
       <Next key={"github"} />,
       <Tailwind key={"tailwind"} />,
-      <Reactjs key={"react"} />,
       <SiMui key={"mui"} className="text-blue-500" />,
-      <FramerMotion key={"framermotion"} />,
+      <ReduxActions key={"redux"} />,
+      <Prisma key={"prisma"} />,
+      <MongoDB key={"mongo"} />,
     ],
   },
 
@@ -88,9 +90,7 @@ export const recentProjects = [
     icons: [
       <Next key={"github"} />,
       <Tailwind key={"tailwind"} />,
-      <Reactjs key={"react"} />,
       <SiMui key={"mui"} className="text-blue-500" />,
-      <FramerMotion key={"framermotion"} />,
     ],
   },
 

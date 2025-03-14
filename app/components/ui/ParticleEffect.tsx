@@ -9,6 +9,8 @@ import { loadFull } from "tsparticles";
 
 const ParticleEffect = () => {
   const [init, setInit] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const handleResize = () => setIsMobile(window.innerWidth <= 768);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -16,6 +18,8 @@ const ParticleEffect = () => {
     }).then(() => {
       setInit(true);
     });
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const options: ISourceOptions = useMemo(() => {
@@ -23,7 +27,7 @@ const ParticleEffect = () => {
     const particlesColor = ["#3b82f6", "#60a5fa", "#1e40af"];
 
     return {
-      fpsLimit: 120,
+      fpsLimit: isMobile ? 30 : 60,
       interactivity: {
         events: {
           onHover: {
@@ -72,10 +76,10 @@ const ParticleEffect = () => {
           straight: false,
         },
         number: {
-          value: 80,
+          value: isMobile ? 40 : 80,
           density: {
             enable: false,
-            area: 800,
+            area: isMobile ? 400 : 800,
           },
         },
         opacity: {
@@ -90,7 +94,7 @@ const ParticleEffect = () => {
       },
       detectRetina: true,
     };
-  }, []);
+  }, [isMobile]);
 
   if (init) {
     return <Particles id="tsparticles" options={options} />;

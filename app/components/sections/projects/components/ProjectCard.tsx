@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
           {data?.title || "Untitled Project"}
         </h2>
 
-        <div className="flex gap-2 justify-between flex-wrap">
+        <div className="flex flex-wrap gap-2 justify-between">
           {/* Tech Icons */}
           <div className="flex flex-wrap items-center gap-2">
             {data?.icons?.length
@@ -57,6 +57,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
 
           {/* View Buttons */}
           <div className="flex gap-2 items-center">
+            {/* Seperator */}
+            <div className="hidden h-5/6 w-[1px] bg-gray-200 dark:bg-gray-800 md:block"/>
+            {/* Button Icons */}
             {data?.githubLink && (
               <Link href={data.githubLink} target="_blank">
                 <ViewButton label="Github Repo">

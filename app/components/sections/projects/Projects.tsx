@@ -66,7 +66,7 @@ const Projects = () => {
         {/* Single Grid with Motion */}
         <MotionCard
           list={projectsList[selectedIndex]}
-          className="animate grid gap-4 overflow-y-hidden sm:grid-cols-2 md:grid-cols-3"
+          className="animate grid gap-4 sm:grid-cols-2 md:grid-cols-3"
         >
           {projectsListLimited.map((item, index) => (
             <ProjectCard key={index} data={item} />

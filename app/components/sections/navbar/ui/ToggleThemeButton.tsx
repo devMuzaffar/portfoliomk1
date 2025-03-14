@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useContext } from "react";
 
-const ToggleThemeButton = () => {
+const ToggleThemeButton: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const { isToggled, setIsToggled, isMobileMenu } = useContext(NavbarContext);
 

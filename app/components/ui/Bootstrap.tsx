@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-const Bootstrap = ({size = 16}: {size?: number | `${number}` | undefined}) => {
+interface SizeProp {size?: number | `${number}` | undefined}
+
+const Bootstrap = ({size = 16}: SizeProp) => {
   return (
     <Image
       className="object-cover p-[2px]"
