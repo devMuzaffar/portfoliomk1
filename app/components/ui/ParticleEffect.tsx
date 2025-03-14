@@ -9,17 +9,32 @@ import { loadFull } from "tsparticles";
 
 const ParticleEffect = () => {
   const [init, setInit] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const handleResize = () => setIsMobile(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
 
   useEffect(() => {
+    // Mobile Resize value
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(
+        () => setIsMobile(window.innerWidth <= 768),
+        100
+      );
+    };
+
+    // Initialize Particles Engine
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
     }).then(() => {
       setInit(true);
     });
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      clearTimeout(resizeTimeout);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const options: ISourceOptions = useMemo(() => {
