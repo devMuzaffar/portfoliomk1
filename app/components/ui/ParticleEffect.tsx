@@ -27,7 +27,7 @@ const ParticleEffect = () => {
     const particlesColor = ["#3b82f6", "#60a5fa", "#1e40af"];
 
     return {
-      fpsLimit: isMobile ? 30 : 60,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onHover: {
