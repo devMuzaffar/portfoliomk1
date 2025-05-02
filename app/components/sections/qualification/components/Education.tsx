@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <div data-aos="fade-up" className="grid grid-cols-3 h-36 place-items-center group">
       {/* Left Placeholder */}
-      <div className="place-self-end w-full h-full translate-x-40 flex items-center justify-end text-sm">
+      <div className="place-self-end w-full h-full translate-x-32 flex items-center justify-end">
         2018-2022
       </div>
 

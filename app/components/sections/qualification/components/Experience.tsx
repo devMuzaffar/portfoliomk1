@@ -55,7 +55,7 @@ const Experience = ({ data }: dataProp) => {
       <MiddleLine />
 
       {/* Right Placeholder */}
-      <div className="place-self-end w-full h-full -translate-x-40 flex items-center">
+      <div className="place-self-end w-full h-full -translate-x-32 flex items-center">
         {data?.date}
       </div>
     </div>

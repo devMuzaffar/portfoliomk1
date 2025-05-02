@@ -1,12 +1,22 @@
 export const experienceList = [
   {
+    name: "Software Engineer",
+    rank: "Intern",
+    location: "Hyderabad",
+    company: "Intrapreneur",
+    locationType: "On-Site",
+    text: "-",
+    date: "2025-Present",
+  },
+
+  {
     name: "MERN Stack",
     rank: "Intern",
     location: "Hyderabad",
     company: "Thinkfeat Software Solutions",
     locationType: "On-Site",
-    text: "-",
-    date: "2024-Present",
+    text: "8-Months",
+    date: "2024-2025",
   },
 
   {
