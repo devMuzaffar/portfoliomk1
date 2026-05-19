@@ -1,10 +1,9 @@
-import { TypeAnimation } from "react-type-animation";
-import HeroButton from "./HeroButton";
 import { socialIcons, subTitle } from "@/app/list/hero";
-import { LuDownload, LuMouse, LuSend } from "react-icons/lu";
-import { LuArrowDown } from "react-icons/lu";
 import Link from "next/link";
+import { LuArrowDown, LuDownload, LuMouse, LuSend } from "react-icons/lu";
+import { TypeAnimation } from "react-type-animation";
 import FloatingButton from "../ui/FloatingButton";
+import HeroButton from "./HeroButton";
 
 const LeftBlock = () => {
   return (
@@ -42,7 +41,7 @@ const LeftBlock = () => {
             </HeroButton>
           </a>
           <a
-            href="https://drive.google.com/file/d/1lx5VRd4mRdrICPqFiuoS4eHPh-UBlZmd/view?usp=sharing"
+            href="https://drive.google.com/file/d/1l_SUEh0_ova7SUlbTs334vZkHPCavclR/view?usp=sharing"
             target="_blank"
           >
             <HeroButton className="bg-secondary hover:bg-secondary/60 w-full md:w-auto">

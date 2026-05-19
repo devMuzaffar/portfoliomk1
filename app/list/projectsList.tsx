@@ -3,18 +3,20 @@ import {
   MongoDB,
   Next,
   Node,
+  Nuxt,
   Prisma,
   Reactjs,
   ReduxActions,
-  Sass,
+  Shadcn,
   Tailwind,
-  Vite,
+  TypeScript,
+  Vite
 } from "@react-symbols/icons";
-import { SiExpress, SiMui } from "react-icons/si";
+import { SiExpress, SiMui, SiVuetify } from "react-icons/si";
+import Bootstrap from "../components/ui/Bootstrap";
+import CSS from "../components/ui/CSS";
 import HTML from "../components/ui/HTML";
 import Javascript from "../components/ui/Javascript";
-import CSS from "../components/ui/CSS";
-import Bootstrap from "../components/ui/Bootstrap";
 
 const reactTechIcons = [
   <Reactjs key={"react"} />,
@@ -34,6 +36,43 @@ const reactMuiIcons = [
 // Recent Projects
 //
 export const recentProjects = [
+
+  // IMIS
+  {
+    img: "/assets/projects/imis.png",
+    title: "Government IMIS Dashboard",
+    icons: [
+      <Next key={"next"} />,
+      <TypeScript key={'typescript'}/>,
+      <SiMui key={"mui"} className="text-blue-500" />,
+      <Tailwind key={"tailwind"} />,
+    ],
+  },
+
+  // GRC
+  {
+    img: "/assets/projects/grc-dashboard.png",
+    title: "GRC Enterprise Dashboard",
+    icons:  [
+      <Nuxt key={"nuxt"} />,
+      <TypeScript key={'typescript'}/>,
+      <SiVuetify key={"vuetify"} />,
+      <Tailwind key={"tailwind"} />,
+    ],
+  },
+
+  // MERCHANT
+  {
+    img: "/assets/projects/merchant.png",
+    title: "Merchant Portal",
+    icons: [
+      <Next key={"next"} />,
+      <TypeScript key={'typescript'}/>,
+      <Tailwind key={"tailwind"} />,
+      <Shadcn key={"shadcn"} />,
+    ],
+  },
+
   //
   {
     img: "/assets/projects/pts.png",
@@ -94,27 +133,7 @@ export const recentProjects = [
     ],
   },
 
-  //
-  {
-    img: "/assets/projects/chat.jpeg",
-    title: "Chat App",
-    githubLink: "https://github.com/devMuzaffar/React_chat",
-    siteLink: "https://reactchatmk.netlify.app/",
-    icons: [
-      <Reactjs key={"react"} />,
-      <Firebase key={"firebase"} />,
-      <Sass key={"sass"} />,
-    ],
-  },
 
-  //
-  {
-    img: "/assets/projects/gpt3.jpeg",
-    title: "GPT-3 Web",
-    githubLink: "https://github.com/devMuzaffar/GPT3Web",
-    siteLink: "https://gpt3mk.netlify.app/",
-    icons: reactTechIcons,
-  },
 ];
 
 //
@@ -142,6 +161,10 @@ export const fullStackProjects = [
 
 export const frontendProjects = [
   // Start
+
+  recentProjects[0],
+  recentProjects[1],
+  recentProjects[2],
   recentProjects[3],
   recentProjects[5],
   {

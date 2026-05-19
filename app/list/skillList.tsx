@@ -7,21 +7,23 @@ import {
   Node,
   Reactjs,
   ReduxActions,
-  Sass,
+  Supabase,
   Tailwind,
   TypeScript,
-  Vercel,
-  Vite,
+  Vercel
 } from "@react-symbols/icons";
-import Mui from "../components/ui/Mui";
+import { SiExpress, SiPostman, SiShadcnui } from "react-icons/si";
 import Bootstrap from "../components/ui/Bootstrap";
-import HTML from "../components/ui/HTML";
-import CSS from "../components/ui/CSS";
-import Javascript from "../components/ui/Javascript";
-import Figma from "../components/ui/Figma";
-import { SiExpress, SiPostman } from "react-icons/si";
-import VsCode from "../components/ui/VsCode";
 import Chakra from "../components/ui/Chakra";
+import CSS from "../components/ui/CSS";
+import Figma from "../components/ui/Figma";
+import HTML from "../components/ui/HTML";
+import Javascript from "../components/ui/Javascript";
+import Mui from "../components/ui/Mui";
+import Nuxt from "../components/ui/Nuxt";
+import SvelteKit from "../components/ui/SvelteKit";
+import VsCode from "../components/ui/VsCode";
+import Vue from "../components/ui/Vue";
 
 // Constant WxH for Custom Icons
 const size = 32;
@@ -34,28 +36,34 @@ const skillsList = [
   {
     title: "Frontend Development",
     icons: [
+      // Core frontend stack first
       { name: "React Js", icon: <Reactjs {...sizeProp} key={"react"} /> },
       { name: "Next Js", icon: <Next {...sizeProp} key={"next"} /> },
+      { name: "Typescript", icon: <TypeScript {...sizeProp} key={"typescript"} /> },
+      { name: "Javascript", icon: <Javascript size={size} key={"javascript"} /> },
+
+      // Modern ecosystem
+      { name: "Vue", icon: <Vue size={size} key={"vue"} /> },
+      { name: "Nuxt", icon: <Nuxt size={size} key={"nuxt"} /> },
+      { name: "Redux", icon: <ReduxActions {...sizeProp} key={"redux"} /> },
+
+      // Styling/UI
       {
         name: "Tailwind CSS",
         icon: <Tailwind {...sizeProp} key={"tailwind"} />,
       },
+      { name: "ShadCN", icon: <SiShadcnui size={size} key={"shadcn"} /> },
       { name: "Material UI", icon: <Mui size={size} key={"mui"} /> },
       { name: "Chakra UI", icon: <Chakra size={size} key={"chakra"} /> },
       { name: "Bootstrap", icon: <Bootstrap size={size} key={"bootstrap"} /> },
-      {
-        name: "Javascript",
-        icon: <Javascript size={size} key={"javascript"} />,
-      },
-      {
-        name: "Typescript",
-        icon: <TypeScript {...sizeProp} key={"typescript"} />,
-      },
-      { name: "Redux", icon: <ReduxActions {...sizeProp} key={"redux"} /> },
+
+      // Fundamentals
       { name: "Html", icon: <HTML size={size} key={"html"} /> },
       { name: "Css", icon: <CSS size={size} key={"css"} /> },
-      { name: "Sass", icon: <Sass {...sizeProp} key={"sass"} /> },
-      { name: "Vite", icon: <Vite {...sizeProp} key={"vite"} /> },
+
+      // Secondary / less important
+      { name: "Svelte", icon: <SvelteKit size={size} key={"svelte"} /> },
+      { name: "SvelteKit", icon: <SvelteKit size={size} key={"sveltekit"} /> },
       { name: "Figma", icon: <Figma size={size} key={"figma"} /> },
     ],
   },
@@ -68,6 +76,7 @@ const skillsList = [
       { name: "MongoDB", icon: <MongoDB {...sizeProp} key={"mongo"} /> },
       { name: "Express.js", icon: <SiExpress size={size} /> },
       { name: "Firebase", icon: <Firebase {...sizeProp} key={"firebase"} /> },
+      { name: "Supabase", icon: <Supabase {...sizeProp} key={"supabase"} /> },
     ],
   },
 

@@ -7,8 +7,8 @@ interface motionCardProp {
   list: {
     img: string;
     title: string;
-    githubLink: string;
-    siteLink: string;
+    githubLink?: string;
+    siteLink?: string;
     icons: JSX.Element[];
   }[];
 }

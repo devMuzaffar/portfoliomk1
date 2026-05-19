@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="section-padding h-screen flex flex-col-reverse relative justify-between items-center gap-16 !pt-28 sm:pt-6 sm:flex-row"
+      className="section-padding h-screen flex flex-col-reverse relative justify-between items-center gap-16 !pt-40 sm:pt-6 md:!pt-28 sm:flex-row"
     >
       {/* Left Texts */}
       <LeftBlock />

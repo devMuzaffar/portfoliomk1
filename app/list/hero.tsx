@@ -1,13 +1,11 @@
-import { LuLinkedin, LuGithub, LuFacebook, LuInstagram } from "react-icons/lu";
+import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 // Subtitle - Type
 const time = 2000;
 export const subTitle = [
-  "I am Frontend Web Developer",
+  "I am Enterprise Frontend Developer",
   time,
-  "I am MERN Stack Enthusiast",
-  time,
-  "I am Full Stack Web Developer",
+  "I am Software Engineer",
   time,
 ];
 
@@ -21,12 +19,12 @@ export const socialIcons = [
     icon: <LuGithub key={"github"} />,
     link: "https://github.com/devMuzaffar/",
   },
-  {
-    icon: <LuFacebook key={"facebook"} />,
-    link: "https://www.facebook.com/Juggernaut911",
-  },
-  {
-    icon: <LuInstagram key={"instagram"} />,
-    link: "https://www.instagram.com/muzaffarhassan64/",
-  },
+  // {
+  //   icon: <LuFacebook key={"facebook"} />,
+  //   link: "https://www.facebook.com/Juggernaut911",
+  // },
+  // {
+  //   icon: <LuInstagram key={"instagram"} />,
+  //   link: "https://www.instagram.com/muzaffarhassan64/",
+  // },
 ];

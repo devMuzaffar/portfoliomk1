@@ -1,5 +1,5 @@
-import Title from "../../ui/Title";
 import servicesList from "@/app/list/servicesList";
+import Title from "../../ui/Title";
 
 const Services = () => {
   return (
@@ -7,7 +7,8 @@ const Services = () => {
       <Title text={"Services"} />
 
       {/* Services tab */}
-      <div data-aos="fade-up" className="grid gap-4 md:grid-cols-3 md:gap-8">
+      {/* Change you Grid Cols to 3 if items are 3 */}
+      <div data-aos="fade-up" className="grid gap-4 md:grid-cols-2 md:gap-8">
 
         {/* List Tab */}
         {servicesList.map(({ icon, title, text }, index) => (

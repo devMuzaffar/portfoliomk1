@@ -1,16 +1,16 @@
+import { Github } from "@react-symbols/icons";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+import Link from "next/link";
 import { LuExternalLink } from "react-icons/lu";
 import ViewButton from "./ViewButton";
-import Image from "next/image";
-import { Github } from "@react-symbols/icons";
-import Link from "next/link";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ProjectData {
   img: string | StaticImport;
   title: string | null;
   icons: React.ReactNode[] | null;
-  githubLink: string | null;
-  siteLink: string | null;
+  githubLink?: string | null;
+  siteLink?: string | null;
 }
 
 interface ProjectCardProps {

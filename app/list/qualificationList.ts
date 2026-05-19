@@ -1,11 +1,11 @@
 export const experienceList = [
   {
     name: "Software Engineer",
-    rank: "Intern",
+    rank: "Junior",
     location: "Hyderabad",
     company: "Intrapreneur",
     locationType: "On-Site",
-    text: "-",
+    text: "1-Year - Present",
     date: "2025-Present",
   },
 
