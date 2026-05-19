@@ -1,3 +1,0 @@
-allowBuilds:
-  '@tsparticles/engine': false
-  sharp: set this to true or false
