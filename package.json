@@ -37,6 +37,9 @@
     "typescript": "^5"
   },
   "pnpm": {
+    "neverBuiltDependencies": [
+      "@tsparticles/engine"
+    ],
     "ignoredBuiltDependencies": [
       "@tsparticles/engine"
     ]
