@@ -1,19 +1,18 @@
 "use client";
-import {
-  Skills,
-  Hero,
-  Navbar,
-  Footer,
-  Qualification,
-  Contact,
-  Services,
-  Projects,
-} from "./components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import Loading from "./loading";
+import {
+  Contact,
+  Footer,
+  Hero,
+  Navbar,
+  Projects,
+  Qualification,
+  Skills
+} from "./components";
 import ParticleEffect from "./components/ui/ParticleEffect";
+import Loading from "./loading";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +34,7 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <Services />
+      {/* <Services /> */}
       <Skills />
       <Projects />
       <Qualification />
