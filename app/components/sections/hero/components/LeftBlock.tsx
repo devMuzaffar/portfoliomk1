@@ -65,7 +65,7 @@ const LeftBlock = () => {
         </div>
 
         {/* Scroll Down button */}
-        <Link href="#services">
+        <Link href="#skills">
           <FloatingButton>
             <div className="w-fit absolute right-0 -bottom-10 animate flex gap-2 items-center">
               <LuMouse className="text-primary" size={32} />
