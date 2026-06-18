@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ViewTransition } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
         <ThemeProvider attribute="class">
-          <ViewTransition>{children}</ViewTransition>
+          {children}
         </ThemeProvider>
       </body>
     </html>
