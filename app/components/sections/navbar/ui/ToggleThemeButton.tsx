@@ -4,6 +4,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useContext } from "react";
 
+// Wrapper to fix @theme-toggles/react type incompatibility with React 19
+// (React 19 removed onPointerEnterCapture/onPointerLeaveCapture from DOMAttributes)
+const ClassicToggle = Classic as unknown as React.FC<{
+  title?: string;
+  toggled?: boolean;
+  toggle?: React.Dispatch<React.SetStateAction<boolean>>;
+  className?: string;
+  duration?: number;
+  onToggle?: () => void;
+  placeholder?: string;
+}>;
+
 const ToggleThemeButton: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const { isToggled, setIsToggled, isMobileMenu } = useContext(NavbarContext);
@@ -22,18 +34,13 @@ const ToggleThemeButton: React.FC = () => {
           transition={{ duration: 0.1, ease: "linear" }}
           className="flex items-center h-full justify-center"
         >
-          <Classic
+          <ClassicToggle
             title=""
             toggled={isToggled}
             toggle={setIsToggled}
             className="text-2xl md:text-3xl"
             duration={750}
             onToggle={() => toggleTheme()}
-            placeholder=""
-            onPointerEnterCapture={() => {}}
-            onPointerEnter={() => {}}
-            onPointerLeaveCapture={() => {}}
-            onPointerLeave={() => {}}
           />
         </motion.div>
       )}

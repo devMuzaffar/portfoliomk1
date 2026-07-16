@@ -27,6 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
             className="animate object-cover"
             src={data.img}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt={data.title || "Project Image"}
           />
         ) : (

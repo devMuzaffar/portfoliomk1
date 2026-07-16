@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import profileEffect from "../style/profileEffect";
 import Image from "next/image";
+import profileEffect from "../style/profileEffect";
 
 const RightBlock = () => {
   return (
@@ -15,6 +15,8 @@ const RightBlock = () => {
               <Image
                 className="object-cover"
                 fill
+                sizes="(max-width: 768px) 224px, 320px"
+                loading="eager"
                 src="/assets/profile.png"
                 alt="Profile"
               />

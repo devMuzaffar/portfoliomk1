@@ -7,7 +7,9 @@ import {
   Prisma,
   Reactjs,
   ReduxActions,
+  Sass,
   Shadcn,
+  Supabase,
   Tailwind,
   TypeScript,
   Vite
@@ -73,14 +75,14 @@ export const recentProjects = [
     ],
   },
 
-  //
+  // PTS Education
   {
     img: "/assets/projects/pts.png",
     title: "PTS Education",
     githubLink: "https://github.com/devMuzaffar/pts-web",
     siteLink: "https://ptseducation.vercel.app/",
     icons: [
-      <Next key={"github"} />,
+      <Next key={"next"} />,
       <Tailwind key={"tailwind"} />,
       <SiMui key={"mui"} className="text-blue-500" />,
       <ReduxActions key={"redux"} />,
@@ -89,7 +91,44 @@ export const recentProjects = [
     ],
   },
 
-  //
+  // Cyber Shield
+  {
+    img: "/assets/projects/cybershield.png",
+    title: "CyberShield Training Portal",
+    githubLink: "https://github.com/devMuzaffar/cybershield-pro",
+    siteLink: "https://cybershieldintra.vercel.app/",
+    icons: [
+      <Next key={"next"} />,
+      <Tailwind key={"tailwind"} />,
+      <Shadcn key={"shadcn"} />,
+      <Supabase />
+    ],
+  },
+
+  // Chaajao Clone
+  {
+    img: "/assets/projects/chaajao.png",
+    title: "Chaajao Clone",
+    githubLink: "https://github.com/devMuzaffar/chaajaonext/",
+    siteLink: "https://chaajaonext.vercel.app/",
+    icons: [
+      <Next key={"next"} />,
+      <Tailwind key={"tailwind"} />,
+      <SiMui key={"mui"} className="text-blue-500" />,
+    ],
+  },
+
+];
+
+//
+// Full Stack Projects
+//
+export const fullStackProjects = [
+
+  // Cyber Shield
+  recentProjects[4],
+
+  // Coin Bounce
   {
     img: "/assets/projects/coinbounce.png",
     title: "Coin Bounce",
@@ -104,7 +143,7 @@ export const recentProjects = [
     ],
   },
 
-  //
+  // Mongo Max
   {
     img: "/assets/projects/merncrud.png",
     title: "MongoMax",
@@ -120,32 +159,20 @@ export const recentProjects = [
     ],
   },
 
-  //
+  // Chat App
   {
-    img: "/assets/projects/chaajao.png",
-    title: "Chaajao Clone",
-    githubLink: "https://github.com/devMuzaffar/chaajaonext/",
-    siteLink: "https://chaajaonext.vercel.app/",
+    img: "/assets/projects/chat.jpeg",
+    title: "Chat App",
+    githubLink: "https://github.com/devMuzaffar/React_chat",
+    siteLink: "https://reactchatmk.netlify.app/",
     icons: [
-      <Next key={"github"} />,
-      <Tailwind key={"tailwind"} />,
-      <SiMui key={"mui"} className="text-blue-500" />,
+      <Reactjs key={"react"} />,
+      <Firebase key={"firebase"} />,
+      <Sass key={"sass"} />,
     ],
   },
 
-
-];
-
-//
-// Full Stack Projects
-//
-export const fullStackProjects = [
-  //
-  recentProjects[1],
-  recentProjects[2],
-  recentProjects[4],
-
-  //
+  // Blog app
   {
     img: "/assets/projects/blog.png",
     title: "Blog App",
@@ -165,8 +192,18 @@ export const frontendProjects = [
   recentProjects[0],
   recentProjects[1],
   recentProjects[2],
-  recentProjects[3],
+
+  // GPT 3
+  {
+    img: "/assets/projects/gpt3.jpeg",
+    title: "GPT-3 Web",
+    githubLink: "https://github.com/devMuzaffar/GPT3Web",
+    siteLink: "https://gpt3mk.netlify.app/",
+    icons: reactTechIcons,
+  },
+
   recentProjects[5],
+  
   {
     img: "/assets/projects/dining.webp",
     title: "Foody Restaurant",

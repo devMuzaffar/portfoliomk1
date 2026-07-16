@@ -13,6 +13,7 @@ import {
   Vercel
 } from "@react-symbols/icons";
 import { SiExpress, SiPostman, SiShadcnui } from "react-icons/si";
+import AngularIcon from "../components/ui/AngularIcon";
 import Bootstrap from "../components/ui/Bootstrap";
 import Chakra from "../components/ui/Chakra";
 import CSS from "../components/ui/CSS";
@@ -45,6 +46,7 @@ const skillsList = [
       // Modern ecosystem
       { name: "Vue", icon: <Vue size={size} key={"vue"} /> },
       { name: "Nuxt", icon: <Nuxt size={size} key={"nuxt"} /> },
+      { name: "Angular", icon: <AngularIcon size={size} key={"angular"} /> },
       { name: "Redux", icon: <ReduxActions {...sizeProp} key={"redux"} /> },
 
       // Styling/UI

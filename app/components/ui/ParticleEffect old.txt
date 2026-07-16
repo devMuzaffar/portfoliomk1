@@ -5,10 +5,7 @@ import {
   OutMode,
   type ISourceOptions,
 } from "@tsparticles/engine";
-import Particles, {
-  ParticlesProvider,
-  type ParticlesPluginRegistrar,
-} from "@tsparticles/react";
+import Particles from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadFull } from "tsparticles";
 
@@ -17,12 +14,20 @@ const MOBILE_BREAKPOINT = 768;
 const getIsMobile = () =>
   typeof window !== "undefined" ? window.innerWidth <= MOBILE_BREAKPOINT : false;
 
-const initParticles: ParticlesPluginRegistrar = async (engine) => {
-  await loadFull(engine);
-};
-
 const ParticleEffect = () => {
+  const [init, setInit] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(getIsMobile);
+
+  useEffect(() => {
+    // Initialize tsparticles engine
+    (async () => {
+      const { initParticlesEngine } = await import("@tsparticles/react");
+      await initParticlesEngine(async (engine) => {
+        await loadFull(engine);
+      });
+      setInit(true);
+    })();
+  }, []);
 
   useEffect(() => {
     // Mobile Resize value
@@ -73,15 +78,11 @@ const ParticleEffect = () => {
         },
       },
       particles: {
-        paint: {
-          color: {
-            value: particlesColor,
-          },
+        color: {
+          value: particlesColor,
         },
         links: {
-          color: {
-            value: particlesColor,
-          },
+          color: particlesColor,
           distance: 180,
           enable: true,
           opacity: 0.2,
@@ -121,11 +122,9 @@ const ParticleEffect = () => {
     };
   }, [isMobile]);
 
-  return (
-    <ParticlesProvider init={initParticles}>
-      <Particles id="tsparticles" options={options} />
-    </ParticlesProvider>
-  );
+  return init ? (
+    <Particles id="tsparticles" options={options} />
+  ) : null;
 };
 
 export default ParticleEffect;

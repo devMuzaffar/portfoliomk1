@@ -1,7 +1,7 @@
 "use client";
-import { useContext } from "react";
 import { NavbarContext } from "@/app/contexts/navbarContext";
 import useScrollScan from "@/app/hooks/useScrollScan";
+import { useContext } from "react";
 import ToggleMenuButton from "../ui/ToggleMenuButton";
 import ToggleThemeButton from "../ui/ToggleThemeButton";
 
