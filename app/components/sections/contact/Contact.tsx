@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Title from "../../ui/Title";
 import FormBlock from "./components/FormBlock";
-import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div id="contact" className="section-padding">
+    <section id="contact" className="section-padding">
       <Title text={"Contact"} />
 
       {/* Contact Form */}
@@ -16,14 +16,14 @@ const Contact = () => {
             width={256}
             height={256}
             src={"/assets/contact/contact.png"}
-            alt=""
+            alt="Contact illustration"
           />
         </div>
 
         {/* Right Contact Form */}
         <FormBlock />
       </div>
-    </div>
+    </section>
   );
 };
 

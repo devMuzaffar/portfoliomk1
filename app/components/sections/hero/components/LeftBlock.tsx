@@ -1,11 +1,16 @@
+"use client";
+
 import { socialIcons, subTitle } from "@/app/list/hero";
-import Link from "next/link";
 import { LuArrowDown, LuDownload, LuMouse, LuSend } from "react-icons/lu";
 import { TypeAnimation } from "react-type-animation";
 import FloatingButton from "../ui/FloatingButton";
 import HeroButton from "./HeroButton";
 
 const LeftBlock = () => {
+  const scrollToSkills = () => {
+    document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       data-aos="fade-right"
@@ -65,7 +70,7 @@ const LeftBlock = () => {
         </div>
 
         {/* Scroll Down button */}
-        <Link href="#skills">
+        <button type="button" onClick={scrollToSkills} className="cursor-pointer">
           <FloatingButton>
             <div className="w-fit absolute right-0 -bottom-10 animate flex gap-2 items-center">
               <LuMouse className="text-primary" size={32} />
@@ -73,7 +78,7 @@ const LeftBlock = () => {
               <LuArrowDown className="text-primary" size={18} />
             </div>
           </FloatingButton>
-        </Link>
+        </button>
       </div>
     </div>
   );

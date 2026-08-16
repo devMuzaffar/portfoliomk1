@@ -1,14 +1,14 @@
 "use client";
 import {
-  recentProjects,
-  fullStackProjects,
-  frontendProjects,
+    frontendProjects,
+    fullStackProjects,
+    recentProjects,
 } from "@/app/list/projectsList";
+import { useState } from "react";
 import Title from "../../ui/Title";
+import FilterButton from "./components/FilterButton";
 import ProjectCard from "./components/ProjectCard";
 import ViewMore from "./components/ViewMore";
-import FilterButton from "./components/FilterButton";
-import { useState } from "react";
 import MotionCard from "./ui/MotionCard";
 
 const Projects = () => {
@@ -41,7 +41,7 @@ const Projects = () => {
   );
 
   return (
-    <div
+    <section
       id="projects"
       className="section-padding"
       suppressHydrationWarning
@@ -76,7 +76,7 @@ const Projects = () => {
         {/* View More */}
         <ViewMoreButton />
       </div>
-    </div>
+    </section>
   );
 };
 

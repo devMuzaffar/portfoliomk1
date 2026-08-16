@@ -10,6 +10,7 @@ const FormBlock = () => {
           className="font-normal text-gray-800 outline-none bg-transparent dark:text-gray-200"
           type="email"
           id="email"
+          name="email"
           required
         />
       </div>
@@ -20,12 +21,13 @@ const FormBlock = () => {
         <textarea
           className="font-normal text-gray-800 outline-none bg-transparent dark:text-gray-200"
           id="message"
+          name="message"
           required
         />
       </div>
 
       {/* Button */}
-      <button className="animate rounded-xl bg-primary text-white text-lg flex justify-between items-center p-4 hover:opacity-70 hover:-translate-y-1 hover:shadow-md md:w-1/2">
+      <button type="submit" className="animate rounded-xl bg-primary text-white text-lg flex justify-between items-center p-4 hover:opacity-70 hover:-translate-y-1 hover:shadow-md md:w-1/2">
         Send <LuSend size={18} />
       </button>
     </form>

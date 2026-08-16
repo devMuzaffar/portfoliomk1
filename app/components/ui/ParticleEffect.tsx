@@ -49,6 +49,7 @@ const ParticleEffect = () => {
 
     return {
       fpsLimit: 60,
+      hdr: false,
       interactivity: {
         events: {
           onHover: {
@@ -84,7 +85,7 @@ const ParticleEffect = () => {
           },
           distance: 180,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.35,
           width: 1,
         },
         collisions: {
@@ -108,7 +109,7 @@ const ParticleEffect = () => {
           },
         },
         opacity: {
-          value: 0.2,
+          value: 0.25,
         },
         shape: {
           type: "circle",

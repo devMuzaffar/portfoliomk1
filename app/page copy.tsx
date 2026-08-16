@@ -1,6 +1,4 @@
 "use client";
-
-// Imports
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -17,11 +15,13 @@ import ParticleEffect from "./components/ui/ParticleEffect";
 import Loading from "./loading";
 
 export default function Home() {
-  // State
   const [isLoading, setIsLoading] = useState(true);
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
+    // Content is already mounted (rendered below). Init AOS now so every
+    // data-aos element is registered before it can become visible, then
+    // refresh so AOS measures positions against the final layout.
     AOS.init({ duration: 700, once: true });
     AOS.refresh();
 
@@ -52,14 +52,12 @@ export default function Home() {
 
       <ParticleEffect />
       <Navbar />
-      <main>
-        <Hero />
-        {/* <Services /> */}
-        <Skills />
-        <Projects />
-        <Qualification />
-        <Contact />
-      </main>
+      <Hero />
+      {/* <Services /> */}
+      <Skills />
+      <Projects />
+      <Qualification />
+      <Contact />
       <Footer />
     </div>
   );

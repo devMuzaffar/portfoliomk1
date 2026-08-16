@@ -4,7 +4,7 @@ import SkillCard from "./components/SkillCard";
 
 const Skills = () => {
   return (
-    <div id="skills" className="section-padding">
+    <section id="skills" className="section-padding">
       {/* Title */}
       <Title text="Skills" />
 
@@ -27,7 +27,7 @@ const Skills = () => {
           icons={skillsList[2].icons}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import RightBlock from "./components/RightBlock";
 
 const Hero = () => {
   return (
-    <div
+    <section
       id="hero"
       className="section-padding h-screen flex flex-col-reverse relative justify-between items-center gap-16 !pt-40 sm:pt-6 md:!pt-28 sm:flex-row"
     >
@@ -13,7 +13,7 @@ const Hero = () => {
 
       {/* Right Image */}
       <RightBlock />
-    </div>
+    </section>
   );
 };
 

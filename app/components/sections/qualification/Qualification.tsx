@@ -1,13 +1,13 @@
-import Title from "../../ui/Title";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
 import { experienceList } from "@/app/list/qualificationList";
-import ExperienceMobile from "./components/ExperienceMobile";
+import Title from "../../ui/Title";
+import Education from "./components/Education";
 import EducationMobile from "./components/EducationMobile";
+import Experience from "./components/Experience";
+import ExperienceMobile from "./components/ExperienceMobile";
 
 const Qualification = () => {
   return (
-    <div id="qualification" className="section-padding">
+    <section id="qualification" className="section-padding">
       <Title text="Education & Experience" />
 
       {/* Timeline - Desktop */}
@@ -32,7 +32,7 @@ const Qualification = () => {
           }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

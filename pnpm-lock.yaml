@@ -20,9 +20,6 @@ importers:
       '@tsparticles/react':
         specifier: ^4.3.2
         version: 4.3.2(@tsparticles/engine@4.3.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@types/aos':
-        specifier: ^3.0.7
-        version: 3.0.8
       aos:
         specifier: ^2.3.4
         version: 2.3.4
@@ -782,9 +779,6 @@ packages:
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
-
-  '@types/aos@3.0.8':
-    resolution: {integrity: sha512-Wydvt0OnVYO5YZxroBOYITIkAKtKmni9GUQRKuWMK3doplBSaHU11HIIweGwqF/ycmbHQGoLUQzuXFRVY+Ougg==}
 
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
@@ -2990,8 +2984,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
-
-  '@types/aos@3.0.8': {}
 
   '@types/estree@1.0.9': {}
 
