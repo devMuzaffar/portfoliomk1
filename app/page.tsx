@@ -3,7 +3,7 @@
 // Imports
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Contact,
   Footer,
@@ -16,22 +16,39 @@ import {
 import ParticleEffect from "./components/ui/ParticleEffect";
 import Loading from "./loading";
 
+const MAX_LOADER_MS = 3000; // Safety fallback — never block longer than 3s
+const FADE_DURATION_MS = 500; // Matches the CSS transition-opacity duration
+
 export default function Home() {
   // State
   const [isLoading, setIsLoading] = useState(true);
   const [showLoader, setShowLoader] = useState(true);
+  const dismissedRef = useRef(false);
+
+  // Shared dismiss logic — called by either particles ready or timeout
+  const dismissLoader = useCallback(() => {
+    if (dismissedRef.current) return;
+    dismissedRef.current = true;
+
+    // Start fade-out
+    setIsLoading(false);
+    // Remove overlay from DOM after fade completes
+    setTimeout(() => setShowLoader(false), FADE_DURATION_MS);
+  }, []);
+
+  // Particles are ready — dismiss the loader
+  const handleParticlesReady = useCallback(() => {
+    dismissLoader();
+  }, [dismissLoader]);
 
   useEffect(() => {
     AOS.init({ duration: 700, once: true });
     AOS.refresh();
 
-    const fadeTimer = setTimeout(() => setIsLoading(false), 250);
-    const removeTimer = setTimeout(() => setShowLoader(false), 750);
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
-    };
-  }, []);
+    // Safety timeout: dismiss loader even if particles take too long
+    const safetyTimer = setTimeout(dismissLoader, MAX_LOADER_MS);
+    return () => clearTimeout(safetyTimer);
+  }, [dismissLoader]);
 
   return (
     <div
@@ -50,7 +67,7 @@ export default function Home() {
         </div>
       )}
 
-      <ParticleEffect />
+      <ParticleEffect onReady={handleParticlesReady} />
       <Navbar />
       <main>
         <Hero />

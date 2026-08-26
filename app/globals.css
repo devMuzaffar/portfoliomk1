@@ -7,6 +7,19 @@
   interpolate-size: allow-keywords;
 }
 
+/* Pre-hydration background — prevents white flash before JS loads */
+html,
+body {
+  @apply bg-gray-100;
+}
+
+.dark html,
+.dark body,
+html.dark,
+html.dark body {
+  @apply bg-primary-dark;
+}
+
 /*  */
 /* Scrollbar */
 /*  */

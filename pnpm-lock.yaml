@@ -20,6 +20,9 @@ importers:
       '@tsparticles/react':
         specifier: ^4.3.2
         version: 4.3.2(@tsparticles/engine@4.3.2)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@tsparticles/slim':
+        specifier: ^4.3.2
+        version: 4.3.2
       aos:
         specifier: ^2.3.4
         version: 2.3.4
@@ -47,9 +50,6 @@ importers:
       react-type-animation:
         specifier: ^3.2.0
         version: 3.2.0(prop-types@15.8.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      tsparticles:
-        specifier: ^4.3.2
-        version: 4.3.2(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -535,12 +535,6 @@ packages:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2
 
-  '@tsparticles/interaction-external-drag@4.3.2':
-    resolution: {integrity: sha512-vIxKHosmGjSDV7JVwJ3lpGjzJGFRNtgzEtIXrVh/QtZv0kSEmsj1+c5Xw43Oxz1xO6eO68DYFgPlixf4egxU6Q==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2
-
   '@tsparticles/interaction-external-grab@4.3.2':
     resolution: {integrity: sha512-WITZJ4u36yPEcnVljpfWhMc8aJn07Zz8Eq7u5umERBTKF0QdLrMWseM3HgSv7AOV04fp86CDciVLOa2Ivdwcrw==}
     peerDependencies:
@@ -583,12 +577,6 @@ packages:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2
 
-  '@tsparticles/interaction-external-trail@4.3.2':
-    resolution: {integrity: sha512-lpmkLRtUF+00dGjQnwXyotR5R5XHipQxAk/FrOsVRNNi2+IGazJE7+LmJHDJdtI6GoFwfC+uriwTqS67MlSWfA==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2
-
   '@tsparticles/interaction-particles-attract@4.3.2':
     resolution: {integrity: sha512-X2GUryt0e5tkeQmIAt7QDqiq3OtNXE72QrM2a+T8E3T0Cvq9/UqrOtlCm6VKlel9OV2NAUi3BH84oCvOcqfYFg==}
     peerDependencies:
@@ -607,15 +595,6 @@ packages:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2
 
-  '@tsparticles/plugin-absorbers@4.3.2':
-    resolution: {integrity: sha512-g1CeYTQi7EvBKECHr/3uo5YKS9+YfefD2l75rwzdFEwALCEFOOjTINBrwwx7UWjYSn1Hpe0oIRMVQ02wXFziFw==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2
-    peerDependenciesMeta:
-      '@tsparticles/plugin-interactivity':
-        optional: true
-
   '@tsparticles/plugin-blend@4.3.2':
     resolution: {integrity: sha512-5iUDwzvcOtiaFvsbL3y+UzneGrlNwITB8HlNCfjp675wrg9xh7ILHa3/ZYHii1qC8gkKNva0w2N+wET9n+XWBQ==}
     peerDependencies:
@@ -625,27 +604,6 @@ packages:
     resolution: {integrity: sha512-yrh6KSD+UEY8aW3hnfzVL84neUwCZ1ZqU/cj5jTHDQ7zFbYu8QA6zhR30kYHI645VmCaMjp+zuZ2ii6rwXsVIQ==}
     peerDependencies:
       '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/plugin-emitters-shape-circle@4.3.2':
-    resolution: {integrity: sha512-MEZcQ8sMx9nHPIlO5+pC6HXFbxtL54Kq9OrVNxsvsKCf03v2Rnf63jlqXeWkxx0XYUNpYSumc39IzQuaouyXPw==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-emitters': 4.3.2
-
-  '@tsparticles/plugin-emitters-shape-square@4.3.2':
-    resolution: {integrity: sha512-sXYep9YCfwsAC/efjUD3jnU0QJ0R0dOcU6oKXLWieMrAmHoa/mP7aN/ZEUntkta8cmi95bswUc8rshBez3DplQ==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-emitters': 4.3.2
-
-  '@tsparticles/plugin-emitters@4.3.2':
-    resolution: {integrity: sha512-wKUw3lkGwUOBNtRC2XuzVLwh6Nur112GG9T+O43quio+J5YjOMGEsfeFaWL3R7kgrj0d+VvQlJESsyZeccgQlg==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2
-    peerDependenciesMeta:
-      '@tsparticles/plugin-interactivity':
-        optional: true
 
   '@tsparticles/plugin-hex-color@4.3.2':
     resolution: {integrity: sha512-uRNSHx/d3hByVYAwPHKKoKxy7s0QujhNUpsgDuL92JODKCjCFm8SudbkW3STSXVznhY5bCcu4iAF+7zKVgVXCg==}
@@ -714,18 +672,8 @@ packages:
     peerDependencies:
       '@tsparticles/engine': 4.3.2
 
-  '@tsparticles/shape-text@4.3.2':
-    resolution: {integrity: sha512-1r57n5WYWIToasVVPHfpLfY5RcuY1iP+Aa2fq8fWmtJklHXUKH4j3lMSJjTsejm/ieYANlZGPmPaX1bTO6INXw==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-
   '@tsparticles/slim@4.3.2':
     resolution: {integrity: sha512-VDCC1xod/Ak9Pn+OD/5AT6y3ccPR3n+EHQBZJKin81yYE/+POfNZ+tDSg/cMmrNBW6MFobKVJpp2kO0AoYFvrw==}
-
-  '@tsparticles/updater-destroy@4.3.2':
-    resolution: {integrity: sha512-aTkmklndTYdUWwCTswn2gUxfersRQMrZa++pXPc9EgamoTnsTAcWGNb4x89sSviwjSt5Oyw78LadZZZfRvX2Ew==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
 
   '@tsparticles/updater-life@4.3.2':
     resolution: {integrity: sha512-RL3803nFKsCsGQavLSZyEiFWhto9R4+QQ/tsqt8PNmHOC7nmI96ZVGVXDknaSuCM4OwuwrDawIdrZUv6OSEFSQ==}
@@ -747,11 +695,6 @@ packages:
     peerDependencies:
       '@tsparticles/engine': 4.3.2
 
-  '@tsparticles/updater-roll@4.3.2':
-    resolution: {integrity: sha512-5PG/uZx8EcwKV2WeyZ9ww4DyE/HjUcuF4loIAJSt2qNP66pwzMnZ0LqD+YOCRWhhm+/ESry3JNHaAWmJY6yp/A==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-
   '@tsparticles/updater-rotate@4.3.2':
     resolution: {integrity: sha512-vDp7sg+FQQ9NRY6Nh2Joccd5oqmv6W1Y0L56AWrxjc6wk29IRuVeRo1QuoqRLzqq/xLJBhsbkyKXZG0wiE8Blg==}
     peerDependencies:
@@ -759,21 +702,6 @@ packages:
 
   '@tsparticles/updater-size@4.3.2':
     resolution: {integrity: sha512-U7YtYqH0MvALOS4Nr33soOFJ63n8qS9Xujl9BcNZnbmRBf4xgOnTC1TztMvGO19GANTBwq4QKsKQiwFlwAk4qw==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-tilt@4.3.2':
-    resolution: {integrity: sha512-iPI0Fc86Nyuxvm0Dx+aPOZ6d7fDZ4SNk+TulCbMQz9Zf5/p6nYB9CDjAuvmTDCLqzZCMUtrwbbzJfLKR7R5Gog==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-twinkle@4.3.2':
-    resolution: {integrity: sha512-zjk9sStqw4fZMOa9IzmBILNG3bavTMH2vaaVzNjj6s11lstoQVch6UjQKU0T7E8ugrtdKWptIcwvBajFeNpeDQ==}
-    peerDependencies:
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-wobble@4.3.2':
-    resolution: {integrity: sha512-nRKKFkjUgFoQG+WpDASlqj4hUPwafgHb9pLjuqAN7ko0udvajspF01nuXFgDznEIVcVU9pXfq9KfQPiU+xyjiQ==}
     peerDependencies:
       '@tsparticles/engine': 4.3.2
 
@@ -1356,6 +1284,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2236,9 +2165,6 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  tsparticles@4.3.2:
-    resolution: {integrity: sha512-4seFHUmXUx7vChyA03VArYXkT1ltV6zWq047j7VEtrSZpY+6sh9+bZ8wrTYjjoTrYqZSNW8pHbavqGH9rq8Z7A==}
-
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2749,11 +2675,6 @@ snapshots:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
 
-  '@tsparticles/interaction-external-drag@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
-
   '@tsparticles/interaction-external-grab@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
     dependencies:
       '@tsparticles/canvas-utils': 4.3.2(@tsparticles/engine@4.3.2)
@@ -2790,11 +2711,6 @@ snapshots:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
 
-  '@tsparticles/interaction-external-trail@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
-
   '@tsparticles/interaction-particles-attract@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
     dependencies:
       '@tsparticles/engine': 4.3.2
@@ -2811,12 +2727,6 @@ snapshots:
       '@tsparticles/engine': 4.3.2
       '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
 
-  '@tsparticles/plugin-absorbers@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-    optionalDependencies:
-      '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
-
   '@tsparticles/plugin-blend@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
       '@tsparticles/engine': 4.3.2
@@ -2824,22 +2734,6 @@ snapshots:
   '@tsparticles/plugin-easing-quad@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
       '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/plugin-emitters-shape-circle@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-emitters@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2)))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-emitters': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-
-  '@tsparticles/plugin-emitters-shape-square@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-emitters@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2)))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/plugin-emitters': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-
-  '@tsparticles/plugin-emitters@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-    optionalDependencies:
-      '@tsparticles/plugin-interactivity': 4.3.2(@tsparticles/engine@4.3.2)
 
   '@tsparticles/plugin-hex-color@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
@@ -2896,11 +2790,6 @@ snapshots:
     dependencies:
       '@tsparticles/engine': 4.3.2
 
-  '@tsparticles/shape-text@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
-      '@tsparticles/canvas-utils': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/engine': 4.3.2
-
   '@tsparticles/slim@4.3.2':
     dependencies:
       '@tsparticles/basic': 4.3.2
@@ -2932,10 +2821,6 @@ snapshots:
       '@tsparticles/updater-paint': 4.3.2(@tsparticles/engine@4.3.2)
       '@tsparticles/updater-rotate': 4.3.2(@tsparticles/engine@4.3.2)
 
-  '@tsparticles/updater-destroy@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-
   '@tsparticles/updater-life@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
       '@tsparticles/engine': 4.3.2
@@ -2953,10 +2838,6 @@ snapshots:
     dependencies:
       '@tsparticles/engine': 4.3.2
 
-  '@tsparticles/updater-roll@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-
   '@tsparticles/updater-rotate@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
       '@tsparticles/animation-utils': 4.3.2(@tsparticles/engine@4.3.2)
@@ -2965,19 +2846,6 @@ snapshots:
   '@tsparticles/updater-size@4.3.2(@tsparticles/engine@4.3.2)':
     dependencies:
       '@tsparticles/animation-utils': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-tilt@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
-      '@tsparticles/animation-utils': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-twinkle@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-
-  '@tsparticles/updater-wobble@4.3.2(@tsparticles/engine@4.3.2)':
-    dependencies:
       '@tsparticles/engine': 4.3.2
 
   '@tybys/wasm-util@0.10.2':
@@ -4675,25 +4543,6 @@ snapshots:
       strip-bom: 3.0.0
 
   tslib@2.8.1: {}
-
-  tsparticles@4.3.2(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2)):
-    dependencies:
-      '@tsparticles/engine': 4.3.2
-      '@tsparticles/interaction-external-drag': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-      '@tsparticles/interaction-external-trail': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-      '@tsparticles/plugin-absorbers': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-      '@tsparticles/plugin-emitters': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2))
-      '@tsparticles/plugin-emitters-shape-circle': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-emitters@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2)))
-      '@tsparticles/plugin-emitters-shape-square': 4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-emitters@4.3.2(@tsparticles/engine@4.3.2)(@tsparticles/plugin-interactivity@4.3.2(@tsparticles/engine@4.3.2)))
-      '@tsparticles/shape-text': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/slim': 4.3.2
-      '@tsparticles/updater-destroy': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/updater-roll': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/updater-tilt': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/updater-twinkle': 4.3.2(@tsparticles/engine@4.3.2)
-      '@tsparticles/updater-wobble': 4.3.2(@tsparticles/engine@4.3.2)
-    transitivePeerDependencies:
-      - '@tsparticles/plugin-interactivity'
 
   type-check@0.4.0:
     dependencies:

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Poppins } from "next/font/google";
-import { ViewTransition } from "react";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -101,7 +100,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider attribute="class">
-          <ViewTransition>{children}</ViewTransition>
+          {children}
         </ThemeProvider>
       </body>
     </html>

@@ -9,8 +9,8 @@ import Particles, {
   ParticlesProvider,
   type ParticlesPluginRegistrar,
 } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "@tsparticles/slim";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const MOBILE_BREAKPOINT = 768;
 
@@ -18,11 +18,23 @@ const getIsMobile = () =>
   typeof window !== "undefined" ? window.innerWidth <= MOBILE_BREAKPOINT : false;
 
 const initParticles: ParticlesPluginRegistrar = async (engine) => {
-  await loadFull(engine);
+  await loadSlim(engine);
 };
 
-const ParticleEffect = () => {
+interface ParticleEffectProps {
+  onReady?: () => void;
+}
+
+const ParticleEffect = ({ onReady }: ParticleEffectProps) => {
   const [isMobile, setIsMobile] = useState<boolean>(getIsMobile);
+  const readyFired = useRef(false);
+
+  const handleParticlesLoaded = useCallback(() => {
+    if (!readyFired.current && onReady) {
+      readyFired.current = true;
+      onReady();
+    }
+  }, [onReady]);
 
   useEffect(() => {
     // Mobile Resize value
@@ -124,7 +136,11 @@ const ParticleEffect = () => {
 
   return (
     <ParticlesProvider init={initParticles}>
-      <Particles id="tsparticles" options={options} />
+      <Particles
+        id="tsparticles"
+        options={options}
+        particlesLoaded={handleParticlesLoaded}
+      />
     </ParticlesProvider>
   );
 };
