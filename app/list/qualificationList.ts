@@ -2,7 +2,7 @@ export const experienceList = [
   {
     name: "Software Engineer",
     rank: "Junior",
-    location: "Hyderabad",
+    location: "PK",
     company: "Intrapreneur",
     locationType: "On-Site",
     text: "1.5-Years - Present",
@@ -12,7 +12,7 @@ export const experienceList = [
   {
     name: "MERN Stack",
     rank: "Intern",
-    location: "Hyderabad",
+    location: "PK",
     company: "Thinkfeat Software Solutions",
     locationType: "On-Site",
     text: "8-Months",
@@ -52,7 +52,7 @@ export const experienceList = [
   {
     name: "Flutter Developer",
     rank: "Intern",
-    location: "Karachi",
+    location: "PK",
     company: "Eusopht",
     locationType: "On-Site",
     text: "1-Month",

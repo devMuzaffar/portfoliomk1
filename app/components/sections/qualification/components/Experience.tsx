@@ -16,10 +16,14 @@ interface experienceProps {
 }
 
 const Experience = ({ data }: dataProp) => {
+  // Vars
   const renderLocationCompany =
     data?.location?.length === undefined || data?.location?.length < 1
       ? data?.company
       : `${data?.location} - ${data?.company}`;
+
+  // Customize this Badge color later
+  const badgeColorClass = (location?: string) => location?.includes('On-Site') ? 'bg-blue-100 text-primary' : 'bg-blue-100 text-primary'
 
   return (
     <div data-aos="fade-up" className="grid grid-cols-3 h-36 place-items-center group">
@@ -39,7 +43,7 @@ const Experience = ({ data }: dataProp) => {
           {/* Text */}
           <div className="flex items-center justify-between">
             <h4 className="text-xs italic">{data?.text}</h4>
-            <p className="text-xs px-2 py-0.5 w-fit bg-blue-100 text-primary rounded-full">
+            <p className={`text-xs px-2 py-0.5 w-fit rounded-full ${badgeColorClass(data?.locationType)}`}>
               {data?.locationType}
             </p>
           </div>
