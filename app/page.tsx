@@ -32,8 +32,13 @@ export default function Home() {
 
     // Start fade-out
     setIsLoading(false);
-    // Remove overlay from DOM after fade completes
-    setTimeout(() => setShowLoader(false), FADE_DURATION_MS);
+    // Init AOS after the overlay fade completes so Hero animations
+    // play when the user can actually see them
+    setTimeout(() => {
+      setShowLoader(false);
+      AOS.init({ duration: 700, once: true });
+      AOS.refresh();
+    }, FADE_DURATION_MS);
   }, []);
 
   // Particles are ready — dismiss the loader
@@ -42,9 +47,6 @@ export default function Home() {
   }, [dismissLoader]);
 
   useEffect(() => {
-    AOS.init({ duration: 700, once: true });
-    AOS.refresh();
-
     // Safety timeout: dismiss loader even if particles take too long
     const safetyTimer = setTimeout(dismissLoader, MAX_LOADER_MS);
     return () => clearTimeout(safetyTimer);
@@ -71,6 +73,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        {/* <About /> */}
         {/* <Services /> */}
         <Skills />
         <Projects />

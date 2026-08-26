@@ -5,7 +5,7 @@ export const experienceList = [
     location: "Hyderabad",
     company: "Intrapreneur",
     locationType: "On-Site",
-    text: "1-Year - Present",
+    text: "1.5-Years - Present",
     date: "2025-Present",
   },
 

@@ -1,8 +1,10 @@
 "use client";
+
+// Imports
 import {
-    frontendProjects,
-    fullStackProjects,
-    recentProjects,
+  frontendProjects,
+  fullStackProjects,
+  recentProjects,
 } from "@/app/list/projectsList";
 import { useState } from "react";
 import Title from "../../ui/Title";
@@ -12,6 +14,7 @@ import ViewMore from "./components/ViewMore";
 import MotionCard from "./ui/MotionCard";
 
 const Projects = () => {
+  // State
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isViewClicked, setIsViewClicked] = useState(false);

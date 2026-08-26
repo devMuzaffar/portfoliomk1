@@ -5,6 +5,8 @@ const time = 2000;
 export const subTitle = [
   "I am Enterprise Frontend Developer",
   time,
+  "I have 2+ Years Experience",
+  time,
   "I am Software Engineer",
   time,
 ];
