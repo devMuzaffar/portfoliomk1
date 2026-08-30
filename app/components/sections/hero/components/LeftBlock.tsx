@@ -46,7 +46,7 @@ const LeftBlock = () => {
             </HeroButton>
           </a>
           <a
-            href="https://drive.google.com/file/d/1l_SUEh0_ova7SUlbTs334vZkHPCavclR/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JXsBQT7NVEPC_HnIT_ogXmxdORNaym-K/view?usp=sharing"
             target="_blank"
           >
             <HeroButton className="bg-secondary hover:bg-secondary/60 w-full md:w-auto">
