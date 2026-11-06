@@ -13,7 +13,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfoliomk1.vercel.app"),
   title: {
-    default: "Muzaffar Hassan | Enterprise Frontend Web Developer",
+    default: "Muzaffar Hassan - Software Engineer",
     template: "%s | Muzaffar Hassan",
   },
   description:
@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "Software Engineer",
     "React Developer",
     "Next.js Developer",
+    "Full-Stack Developer",
     "TypeScript",
     "Web Developer Portfolio",
   ],
