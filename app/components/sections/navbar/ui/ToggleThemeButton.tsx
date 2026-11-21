@@ -17,11 +17,11 @@ const ClassicToggle = Classic as unknown as React.FC<{
 }>;
 
 const ToggleThemeButton: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const { isToggled, setIsToggled, isMobileMenu } = useContext(NavbarContext);
 
   const toggleTheme = () => {
-    return theme === "light" ? setTheme("dark") : setTheme("light");
+    return resolvedTheme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   return (

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/assets/profile.png",
+        url: "/assets/profile.jpg",
         width: 640,
         height: 640,
         alt: "Muzaffar Hassan",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Muzaffar Hassan | Enterprise Frontend Web Developer",
     description:
       "Portfolio of Muzaffar Hassan, an Enterprise Frontend Web Developer and Software Engineer.",
-    images: ["/assets/profile.png"],
+    images: ["/assets/profile.jpg"],
   },
   robots: {
     index: true,
@@ -76,7 +76,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Muzaffar Hassan",
   url: "https://portfoliomk1.vercel.app",
-  image: "https://portfoliomk1.vercel.app/assets/profile.png",
+  image: "https://portfoliomk1.vercel.app/assets/profile.jpg",
   jobTitle: "Enterprise Frontend Web Developer",
   description:
     "Enterprise Frontend Web Developer and Software Engineer specializing in React, Next.js, and TypeScript.",
@@ -100,7 +100,12 @@ export default function RootLayout({
             __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <ThemeProvider attribute="class">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>

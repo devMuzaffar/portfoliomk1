@@ -17,7 +17,7 @@ const RightBlock = () => {
                 fill
                 sizes="(max-width: 768px) 224px, 320px"
                 loading="eager"
-                src="/assets/profile.png"
+                src="/assets/profile.jpg"
                 alt="Profile"
               />
             </div>
