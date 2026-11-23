@@ -1,11 +1,12 @@
+import { getProjectDetails } from "@/app/list/projectDetailsList";
 import { Github } from "@react-symbols/icons";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import Link from "next/link";
-import { LuExternalLink } from "react-icons/lu";
+import { LuExternalLink, LuFileText } from "react-icons/lu";
 import ViewButton from "./ViewButton";
 
-interface ProjectData {
+export interface ProjectData {
   img: string | StaticImport;
   title: string | null;
   icons: React.ReactNode[] | null;
@@ -15,11 +16,33 @@ interface ProjectData {
 
 interface ProjectCardProps {
   data: ProjectData | null;
+  onOpen?: (data: ProjectData) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ data, onOpen }) => {
+  // Only projects with a description or features in projectDetailsList are clickable
+  const details = getProjectDetails(data?.title);
+  const hasDetails = Boolean(
+    details && (details.features?.length || details.description)
+  );
+  const isClickable = hasDetails && Boolean(onOpen);
+
+  const handleOpen = () => {
+    if (data && onOpen) onOpen(data);
+  };
+
   return (
-    <article className="animate border-[1px] border-gray-400 glass-effect max-h-min rounded-xl flex flex-col justify-evenly gap-2 p-2 hover:-translate-y-1 hover:border-primary dark:border-gray-700 hover:dark:border-primary hover:bg-primary/10 hover:dark:bg-gray-800">
+    <article className="relative animate border-[1px] border-gray-400 glass-effect max-h-min rounded-xl flex flex-col justify-evenly gap-2 p-2 hover:-translate-y-1 hover:border-primary dark:border-gray-700 hover:dark:border-primary hover:bg-primary/10 hover:dark:bg-gray-800">
+      {/* Whole card click target, only for projects with a description */}
+      {isClickable && (
+        <button
+          type="button"
+          onClick={handleOpen}
+          aria-label={`View details of ${data?.title ?? "project"}`}
+          className="absolute inset-0 z-10 cursor-pointer rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        />
+      )}
+
       {/* Top Image */}
       <div className="relative inset-0 w-full h-36 rounded-md border-[1px] border-gray-400 overflow-hidden">
         {data?.img ? (
@@ -49,7 +72,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
           <div className="flex flex-wrap items-center gap-2">
             {data?.icons?.length
               ? data.icons.map((icon, index) => (
-                  <div key={index} className="rounded-full bg-gray-300 p-2 w-8">
+                  <div key={index} className="rounded-full bg-gray-300 p-2 size-8 flex items-center justify-center">
                     {icon}
                   </div>
                 ))
@@ -59,17 +82,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
           {/* View Buttons */}
           <div className="flex gap-2 items-center">
             {/* Seperator */}
-            <div className="hidden h-5/6 w-[1px] bg-gray-200 dark:bg-gray-800 md:block"/>
+            {data?.githubLink && data?.siteLink && (
+              <div className="hidden h-5/6 w-[1px] bg-gray-200 dark:bg-gray-800 md:block"/>
+            )}
             {/* Button Icons */}
+
+            {/* Description button */}
+            {hasDetails && (
+              <span className="relative z-20">
+                <ViewButton label="View Details" onClick={handleOpen}>
+                  <LuFileText size={14} />
+                </ViewButton>
+              </span>
+            )}
+
+            {/* Github button */}
             {data?.githubLink && (
-              <Link href={data.githubLink} target="_blank">
+              <Link href={data.githubLink} target="_blank" className="relative z-20">
                 <ViewButton label="Github Repo">
                   <Github />
                 </ViewButton>
               </Link>
             )}
+
+            {/* Site button */}
             {data?.siteLink && (
-              <Link href={data.siteLink} target="_blank">
+              <Link href={data.siteLink} target="_blank" className="relative z-20">
                 <ViewButton label="View Live Site">
                   <LuExternalLink size={16} />
                 </ViewButton>
