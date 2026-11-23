@@ -6,10 +6,12 @@ import {
   fullStackProjects,
   recentProjects,
 } from "@/app/list/projectsList";
-import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useCallback, useState } from "react";
 import Title from "../../ui/Title";
 import FilterButton from "./components/FilterButton";
-import ProjectCard from "./components/ProjectCard";
+import ProjectCard, { type ProjectData } from "./components/ProjectCard";
+import ProjectModal from "./components/ProjectModal";
 import ViewMore from "./components/ViewMore";
 import MotionCard from "./ui/MotionCard";
 
@@ -18,12 +20,14 @@ const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isViewClicked, setIsViewClicked] = useState(false);
+  const [activeProject, setActiveProject] = useState<ProjectData | null>(null);
   const buttonList = ["Featured", "Full Stack", "Frontend"];
   const projectsList = [
     [...recentProjects],
     [...fullStackProjects],
     [...frontendProjects],
   ];
+  const handleCloseProject = useCallback(() => setActiveProject(null), []);
   const handleViewAll = () => {
     setIsExpanded(!isExpanded);
     if (isExpanded) {
@@ -72,13 +76,24 @@ const Projects = () => {
           className="animate grid gap-4 sm:grid-cols-2 md:grid-cols-3"
         >
           {projectsListLimited.map((item, index) => (
-            <ProjectCard key={index} data={item} />
+            <ProjectCard key={index} data={item} onOpen={setActiveProject} />
           ))}
         </MotionCard>
 
         {/* View More */}
         <ViewMoreButton />
       </div>
+
+      {/* Project Details Modal */}
+      <AnimatePresence>
+        {activeProject && (
+          <ProjectModal
+            key="project-modal"
+            project={activeProject}
+            onClose={handleCloseProject}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
